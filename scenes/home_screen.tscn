@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://frxowme0esdo"]
 
+[ext_resource type="Texture2D" uid="uid://dh6f8hmsuevl7" path="res://assets/HomeScreenBackground.png" id="1_bie51"]
 [ext_resource type="Texture2D" uid="uid://ct3eer5blk028" path="res://assets/buttons/green/button.png" id="1_lapbl"]
+[ext_resource type="FontFile" uid="uid://c25vnafe4u45e" path="res://assets/fonts/font.ttf" id="2_ih2x6"]
 [ext_resource type="Texture2D" uid="uid://5uc11tr7x8gt" path="res://assets/buttons/green/click.png" id="2_tjifo"]
 [ext_resource type="Texture2D" uid="uid://vyxx1k6wd6ip" path="res://assets/buttons/green/hover.png" id="2_ujmiq"]
 
@@ -37,53 +39,67 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=510714837]
+layout_mode = 0
+offset_top = -400.0
+offset_right = 1920.0
+offset_bottom = 1520.0
+texture = ExtResource("1_bie51")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1661310388]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.6075243, 0.7923681, 0.90105695, 1)
+color = Color(0.5019608, 0.5019608, 0.5019608, 0.47843137)
 
 [node name="Label" type="Label" parent="." unique_id=488155031]
 layout_mode = 0
-offset_left = 850.0
-offset_top = -15.0
-offset_right = 1833.0
-offset_bottom = 285.0
+offset_left = 880.0
+offset_top = 400.0
+offset_right = 1863.0
+offset_bottom = 700.0
+theme_override_fonts/font = ExtResource("2_ih2x6")
 theme_override_font_sizes/font_size = 160
 text = "VOLTA VISTA"
 
 [node name="buttons" type="GridContainer" parent="." unique_id=119459236]
 layout_mode = 0
 offset_left = 25.0
-offset_top = 25.0
+offset_top = 245.0
 offset_right = 775.0
-offset_bottom = 525.0
+offset_bottom = 745.0
 
 [node name="button1" type="Button" parent="buttons" unique_id=1049100157]
+modulate = Color(1, 1, 1, 0.7529412)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_3813x")
+theme_override_fonts/font = ExtResource("2_ih2x6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
 text = "Start Game"
 
 [node name="button2" type="Button" parent="buttons" unique_id=944051874]
+modulate = Color(1, 1, 1, 0.7529412)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_3813x")
+theme_override_fonts/font = ExtResource("2_ih2x6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
 text = "Load Game"
 
 [node name="button3" type="Button" parent="buttons" unique_id=1819979208]
+modulate = Color(1, 1, 1, 0.7529412)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_3813x")
+theme_override_fonts/font = ExtResource("2_ih2x6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
