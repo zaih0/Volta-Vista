@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://frxowme0esdo"]
+
+[ext_resource type="Texture2D" uid="uid://ct3eer5blk028" path="res://assets/buttons/green/button.png" id="1_lapbl"]
+[ext_resource type="Texture2D" uid="uid://5uc11tr7x8gt" path="res://assets/buttons/green/click.png" id="2_tjifo"]
+[ext_resource type="Texture2D" uid="uid://vyxx1k6wd6ip" path="res://assets/buttons/green/hover.png" id="2_ujmiq"]
+
+[sub_resource type="Theme" id="Theme_3813x"]
+default_font_size = 40
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujmiq"]
+texture = ExtResource("1_lapbl")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bie51"]
+texture = ExtResource("2_tjifo")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjifo"]
+texture = ExtResource("2_ujmiq")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[node name="home_screen" type="Control" unique_id=1544743820]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1661310388]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.6075243, 0.7923681, 0.90105695, 1)
+
+[node name="Label" type="Label" parent="." unique_id=488155031]
+layout_mode = 0
+offset_left = 850.0
+offset_top = -15.0
+offset_right = 1833.0
+offset_bottom = 285.0
+theme_override_font_sizes/font_size = 160
+text = "VOLTA VISTA"
+
+[node name="buttons" type="GridContainer" parent="." unique_id=119459236]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 775.0
+offset_bottom = 525.0
+
+[node name="button1" type="Button" parent="buttons" unique_id=1049100157]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_3813x")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
+text = "Start Game"
+
+[node name="button2" type="Button" parent="buttons" unique_id=944051874]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_3813x")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
+text = "Load Game"
+
+[node name="button3" type="Button" parent="buttons" unique_id=1819979208]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_3813x")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
+text = "Exit"
