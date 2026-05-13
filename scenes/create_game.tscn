@@ -45,20 +45,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=122242319]
+[node name="backgroundImage" type="TextureRect" parent="." unique_id=122242319]
 layout_mode = 0
 offset_top = -400.0
 offset_right = 1920.0
 offset_bottom = 1520.0
 texture = ExtResource("1_cqxoa")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1846749539]
+[node name="background" type="ColorRect" parent="." unique_id=1846749539]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.5019608, 0.5019608, 0.5019608, 0.47843137)
 
-[node name="Panel" type="Panel" parent="." unique_id=286450190]
+[node name="panel" type="Panel" parent="." unique_id=286450190]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.005729167
@@ -71,7 +71,7 @@ offset_right = 1514.0
 offset_bottom = 881.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_b3lh1")
 
-[node name="Button" type="Button" parent="Panel" unique_id=744255739]
+[node name="Start" type="Button" parent="panel" unique_id=744255739]
 modulate = Color(1, 1, 1, 0.69411767)
 layout_mode = 0
 offset_left = 677.0
@@ -85,7 +85,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_il0s4")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xl7m2")
 text = "Start"
 
-[node name="TextEdit" type="TextEdit" parent="Panel" unique_id=1765345580]
+[node name="nameInput" type="TextEdit" parent="panel" unique_id=1765345580]
 layout_mode = 0
 offset_left = 52.0
 offset_top = 113.0
@@ -95,7 +95,7 @@ theme_override_fonts/font = ExtResource("2_il0s4")
 theme_override_font_sizes/font_size = 60
 text = "My City"
 
-[node name="Label" type="Label" parent="Panel" unique_id=1377965351]
+[node name="townName" type="Label" parent="panel" unique_id=1377965351]
 layout_mode = 0
 offset_left = 53.0
 offset_top = 51.0
@@ -105,7 +105,7 @@ theme_override_fonts/font = ExtResource("2_il0s4")
 theme_override_font_sizes/font_size = 40
 text = "Town Name:"
 
-[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=218198507]
+[node name="mapGrid" type="GridContainer" parent="panel" unique_id=218198507]
 layout_mode = 0
 offset_left = 52.0
 offset_top = 219.0
@@ -113,7 +113,7 @@ offset_right = 952.0
 offset_bottom = 519.0
 columns = 3
 
-[node name="TextureButton1" type="TextureButton" parent="Panel/GridContainer" unique_id=1835865670]
+[node name="map1" type="TextureButton" parent="panel/mapGrid" unique_id=1835865670]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -121,7 +121,7 @@ texture_normal = ExtResource("6_wk0en")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton2" type="TextureButton" parent="Panel/GridContainer" unique_id=1572373645]
+[node name="map2" type="TextureButton" parent="panel/mapGrid" unique_id=1572373645]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -129,7 +129,7 @@ texture_normal = ExtResource("7_4pre3")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton3" type="TextureButton" parent="Panel/GridContainer" unique_id=1169993075]
+[node name="map3" type="TextureButton" parent="panel/mapGrid" unique_id=1169993075]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

@@ -41,20 +41,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ked1l")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=510714837]
+[node name="backgroundImage" type="TextureRect" parent="." unique_id=510714837]
 layout_mode = 0
 offset_top = -400.0
 offset_right = 1920.0
 offset_bottom = 1520.0
 texture = ExtResource("1_bie51")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1661310388]
+[node name="background" type="ColorRect" parent="." unique_id=1661310388]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.5019608, 0.5019608, 0.5019608, 0.47843137)
 
-[node name="Label" type="Label" parent="." unique_id=488155031]
+[node name="title" type="Label" parent="." unique_id=488155031]
 layout_mode = 0
 offset_left = 880.0
 offset_top = 400.0
