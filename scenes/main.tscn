@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://cx4vh1gwf3pl1"]
 
+[ext_resource type="Texture2D" uid="uid://dqplmb33hypqw" path="res://assets/GrasslandsWaterways.png" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://cns5mudh2v1p4" path="res://assets/HalfHalf.png" id="1_o5qli"]
+
 [node name="Main" type="Node2D" unique_id=418685992]
+
+[node name="GrasslandsWaterways" type="Sprite2D" parent="." unique_id=1625863102]
+position = Vector2(713, 83)
+texture = ExtResource("1_0wfyh")
+
+[node name="ChatGptImageMay13,2026,100624Am(2)" type="Sprite2D" parent="." unique_id=56852537]
+position = Vector2(720, 179)
+texture = ExtResource("1_o5qli")
