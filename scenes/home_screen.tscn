@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://frxowme0esdo"]
 
 [ext_resource type="Texture2D" uid="uid://dh6f8hmsuevl7" path="res://assets/HomeScreenBackground.png" id="1_bie51"]
+[ext_resource type="Script" uid="uid://bsc8p3msgd3f1" path="res://scripts/home_screen.gd" id="1_ked1l"]
 [ext_resource type="Texture2D" uid="uid://ct3eer5blk028" path="res://assets/buttons/green/button.png" id="1_lapbl"]
-[ext_resource type="FontFile" uid="uid://c25vnafe4u45e" path="res://assets/fonts/font.ttf" id="2_ih2x6"]
 [ext_resource type="Texture2D" uid="uid://5uc11tr7x8gt" path="res://assets/buttons/green/click.png" id="2_tjifo"]
 [ext_resource type="Texture2D" uid="uid://vyxx1k6wd6ip" path="res://assets/buttons/green/hover.png" id="2_ujmiq"]
+[ext_resource type="FontFile" uid="uid://cxymlhu45rumf" path="res://assets/fonts/basis33.ttf" id="3_ked1l"]
 
 [sub_resource type="Theme" id="Theme_3813x"]
 default_font_size = 40
@@ -38,6 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ked1l")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=510714837]
 layout_mode = 0
@@ -58,7 +60,7 @@ offset_left = 880.0
 offset_top = 400.0
 offset_right = 1863.0
 offset_bottom = 700.0
-theme_override_fonts/font = ExtResource("2_ih2x6")
+theme_override_fonts/font = ExtResource("3_ked1l")
 theme_override_font_sizes/font_size = 160
 text = "VOLTA VISTA"
 
@@ -75,7 +77,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_3813x")
-theme_override_fonts/font = ExtResource("2_ih2x6")
+theme_override_fonts/font = ExtResource("3_ked1l")
+theme_override_font_sizes/font_size = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
@@ -87,7 +90,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_3813x")
-theme_override_fonts/font = ExtResource("2_ih2x6")
+theme_override_fonts/font = ExtResource("3_ked1l")
+theme_override_font_sizes/font_size = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
@@ -99,8 +103,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_3813x")
-theme_override_fonts/font = ExtResource("2_ih2x6")
+theme_override_fonts/font = ExtResource("3_ked1l")
+theme_override_font_sizes/font_size = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
 text = "Exit"
+
+[connection signal="pressed" from="buttons/button1" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="buttons/button2" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="buttons/button3" to="." method="_on_exit_pressed"]
