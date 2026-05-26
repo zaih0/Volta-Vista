@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://dyljcfpnqst8p"]
+
+[ext_resource type="FontFile" uid="uid://cxymlhu45rumf" path="res://assets/fonts/basis33.ttf" id="1_6fi6k"]
+[ext_resource type="Texture2D" uid="uid://ct3eer5blk028" path="res://assets/buttons/green/button.png" id="2_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://5uc11tr7x8gt" path="res://assets/buttons/green/click.png" id="3_047uy"]
+[ext_resource type="Texture2D" uid="uid://vyxx1k6wd6ip" path="res://assets/buttons/green/hover.png" id="4_5pdws"]
+
+[sub_resource type="Theme" id="Theme_hd3ao"]
+default_font_size = 40
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0i1j5"]
+texture = ExtResource("2_uo2fv")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mphia"]
+texture = ExtResource("3_047uy")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0m4u7"]
+texture = ExtResource("4_5pdws")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[node name="hud" type="Control" unique_id=1959446401]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1193206217]
+layout_mode = 0
+offset_top = 1000.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.796243, 0.796243, 0.796243, 1)
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1076689511]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 1005.0
+offset_right = 1910.0
+offset_bottom = 1075.0
+columns = 5
+
+[node name="button1" type="Button" parent="GridContainer" unique_id=1321019079]
+modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_hd3ao")
+theme_override_fonts/font = ExtResource("1_6fi6k")
+theme_override_font_sizes/font_size = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0i1j5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mphia")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0m4u7")
+text = "Start Game"
+
+[node name="button2" type="Button" parent="GridContainer" unique_id=1690854632]
+modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_hd3ao")
+theme_override_fonts/font = ExtResource("1_6fi6k")
+theme_override_font_sizes/font_size = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0i1j5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mphia")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0m4u7")
+text = "Start Game"
+
+[node name="button3" type="Button" parent="GridContainer" unique_id=2014137385]
+modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_hd3ao")
+theme_override_fonts/font = ExtResource("1_6fi6k")
+theme_override_font_sizes/font_size = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0i1j5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mphia")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0m4u7")
+text = "Start Game"
+
+[node name="button4" type="Button" parent="GridContainer" unique_id=746062386]
+modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_hd3ao")
+theme_override_fonts/font = ExtResource("1_6fi6k")
+theme_override_font_sizes/font_size = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0i1j5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mphia")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0m4u7")
+text = "Start Game"
+
+[node name="button5" type="Button" parent="GridContainer" unique_id=1341663918]
+modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_hd3ao")
+theme_override_fonts/font = ExtResource("1_6fi6k")
+theme_override_font_sizes/font_size = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0i1j5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mphia")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0m4u7")
+text = "Start Game"
