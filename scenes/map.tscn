@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dakbcu74pgmrx"]
 
 [ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="1_4xfga"]
+[ext_resource type="Script" uid="uid://kk575dr20but" path="res://scripts/daynightcycle.gd" id="1_paxxb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_paxxb"]
 texture = ExtResource("1_4xfga")
@@ -1749,6 +1750,7 @@ texture = ExtResource("1_4xfga")
 sources/0 = SubResource("TileSetAtlasSource_paxxb")
 
 [node name="map" type="Node2D" unique_id=1015157992]
+script = ExtResource("1_paxxb")
 
 [node name="water_layer" type="TileMapLayer" parent="." unique_id=1844561232]
 position = Vector2(1161, 772)
@@ -1813,3 +1815,5 @@ tile_set = SubResource("TileSet_gldc4")
 [node name="extra2_layer" type="TileMapLayer" parent="." unique_id=640333322]
 position = Vector2(1165, 772)
 tile_set = SubResource("TileSet_gldc4")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=158115188]
