@@ -1,13 +1,10 @@
 [gd_scene format=3 uid="uid://bkkua5a0uei3u"]
 
-[ext_resource type="Texture2D" uid="uid://dh6f8hmsuevl7" path="res://assets/HomeScreenBackground.png" id="1_cqxoa"]
+[ext_resource type="Script" uid="uid://bvewpuksxaec" path="res://scripts/create_game.gd" id="1_il0s4"]
 [ext_resource type="Texture2D" uid="uid://ct3eer5blk028" path="res://assets/buttons/green/button.png" id="2_b3lh1"]
 [ext_resource type="FontFile" uid="uid://cxymlhu45rumf" path="res://assets/fonts/basis33.ttf" id="2_il0s4"]
 [ext_resource type="Texture2D" uid="uid://vyxx1k6wd6ip" path="res://assets/buttons/green/hover.png" id="3_l33at"]
 [ext_resource type="Texture2D" uid="uid://5uc11tr7x8gt" path="res://assets/buttons/green/click.png" id="3_xl7m2"]
-[ext_resource type="Texture2D" uid="uid://dq1ja0iv882md" path="res://assets/Map1.png" id="6_wk0en"]
-[ext_resource type="Texture2D" uid="uid://ddplswwi8w1iy" path="res://assets/Map2.png" id="7_4pre3"]
-[ext_resource type="Texture2D" uid="uid://dvwmhqm5wdq15" path="res://assets/Map3.png" id="8_khur7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3lh1"]
 bg_color = Color(0.26293245, 0.26293248, 0.26293233, 0.5254902)
@@ -44,13 +41,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_il0s4")
 
 [node name="backgroundImage" type="TextureRect" parent="." unique_id=122242319]
 layout_mode = 0
 offset_top = -400.0
 offset_right = 1920.0
 offset_bottom = 1520.0
-texture = ExtResource("1_cqxoa")
 
 [node name="background" type="ColorRect" parent="." unique_id=1846749539]
 layout_mode = 0
@@ -117,7 +114,6 @@ columns = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("6_wk0en")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -125,7 +121,6 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("7_4pre3")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -133,6 +128,5 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("8_khur7")
 ignore_texture_size = true
 stretch_mode = 0
