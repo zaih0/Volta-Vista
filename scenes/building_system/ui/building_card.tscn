@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://44qmr8wemwjf"]
+
+[ext_resource type="Script" uid="uid://caa2ihra0a5yq" path="res://scripts/building_system/building_card.gd" id="1_s41ql"]
+
+[node name="building_card" type="MarginContainer" unique_id=1070117985]
+custom_minimum_size = Vector2(330, 300)
+script = ExtResource("1_s41ql")
+
+[node name="background" type="ColorRect" parent="." unique_id=1230606041]
+layout_mode = 2
+color = Color(0, 0.61960787, 0.91764706, 0.5921569)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=305497426]
+layout_mode = 2
+
+[node name="building_preview" type="MarginContainer" parent="VBoxContainer" unique_id=407090473]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="preview_container" type="Node2D" parent="VBoxContainer/building_preview" unique_id=1564391395]
+position = Vector2(170, 180)
+
+[node name="title" type="Label" parent="VBoxContainer" unique_id=1348309811]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 1

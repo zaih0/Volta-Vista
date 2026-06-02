@@ -1,10 +1,10 @@
-[gd_scene format=4 uid="uid://ckegh62goxrab"]
+[gd_scene format=4 uid="uid://63wy5wic7gaj"]
 
-[ext_resource type="Script" uid="uid://bu1vo3b6dnfih" path="res://scenes/buildings/house.gd" id="1_ksyxy"]
-[ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="2_sr1lu"]
+[ext_resource type="Script" uid="uid://bu1vo3b6dnfih" path="res://scripts/building_system/calculate_footprint.gd" id="1_osecd"]
+[ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="2_b5q46"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbhq3"]
-texture = ExtResource("2_sr1lu")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sr1lu"]
+texture = ExtResource("2_b5q46")
 12:0/0 = 0
 13:0/0 = 0
 14:0/0 = 0
@@ -1746,13 +1746,18 @@ texture = ExtResource("2_sr1lu")
 42:49/0 = 0
 43:49/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_goaca"]
-sources/0 = SubResource("TileSetAtlasSource_xbhq3")
+[sub_resource type="TileSet" id="TileSet_xbhq3"]
+sources/0 = SubResource("TileSetAtlasSource_sr1lu")
 
-[node name="House" type="Node2D" unique_id=29287472]
-script = ExtResource("1_ksyxy")
+[node name="House2" type="Node2D" unique_id=29287472]
+script = ExtResource("1_osecd")
 
-[node name="building" type="TileMapLayer" parent="." unique_id=1945648141]
-position = Vector2(1160, 776)
-tile_map_data = PackedByteArray("AAC2/83/AAAgABoAAAC2/87/AAAgABsAAAC2/8//AAAgABwAAAC2/9D/AAAgAB0AAAC3/83/AAAhABoAAAC3/87/AAAhABsAAAC3/8//AAAhABwAAAC3/9D/AAAhAB0AAAC4/83/AAAiABoAAAC4/87/AAAiABsAAAC4/8//AAAiABwAAAC4/9D/AAAiAB0AAAA=")
-tile_set = SubResource("TileSet_goaca")
+[node name="detail_layer2" type="TileMapLayer" parent="." unique_id=225815610]
+position = Vector2(1088, 754)
+tile_map_data = PackedByteArray("AAC7/8//AAAaAB0AAAC8/8//AAAbAB0AAAC7/87/AAAaAB0AAAC8/87/AAAbAB0AAAC7/83/AAAaAB0AAAC8/83/AAAbAB0AAAC7/8z/AAAaAB0AAAC8/8z/AAAbAB0AAAA=")
+tile_set = SubResource("TileSet_xbhq3")
+
+[node name="building" type="TileMapLayer" parent="." unique_id=1652311285]
+position = Vector2(1088, 754)
+tile_map_data = PackedByteArray("AAC+/8z/AAAcAB8AAAC+/83/AAAcABsAAAC+/87/AAAcABsAAAC+/8//AAAcABsAAAC+/9D/AAAcABwAAAC+/9H/AAARAB4AAAC9/9D/AAAbABwAAAC8/9D/AAAYABwAAAC7/9D/AAAYABwAAAC6/8//AAAVABsAAAC6/9D/AAAVABwAAAC9/8//AAAbABsAAAC9/87/AAAbABsAAAC9/83/AAAbABsAAAC6/83/AAAVABsAAAC6/87/AAAVABsAAAC5/8//AAAUABsAAAC5/9D/AAAUABwAAAC5/9H/AAAUAB0AAAC5/87/AAAUABsAAAC5/83/AAAUABsAAAC9/8z/AAAbAB8AAAC6/8z/AAAVAB8AAAC5/8z/AAAUAB8AAAC6/9H/AAAXABwAAAC7/9H/AAAXABwAAAC8/9H/AAAXABwAAAC9/9H/AAAXABwAAAC7/8z/AAAYAB8AAAC8/8z/AAAYAB8AAAA=")
+tile_set = SubResource("TileSet_xbhq3")
