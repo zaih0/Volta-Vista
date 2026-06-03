@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbar40ky7c1r4"
+path="res://.godot/imported/Warcraft 3 Blacksmith Voice track.mp3-a232f52ca998c638f395284ddb322e53.mp3str"
+
+[deps]
+
+source_file="res://AudioBestanden UnCircumsized/Warcraft 3 Blacksmith Voice track.mp3"
+dest_files=["res://.godot/imported/Warcraft 3 Blacksmith Voice track.mp3-a232f52ca998c638f395284ddb322e53.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
