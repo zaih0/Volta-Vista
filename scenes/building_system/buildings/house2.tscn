@@ -1753,11 +1753,11 @@ sources/0 = SubResource("TileSetAtlasSource_sr1lu")
 script = ExtResource("1_osecd")
 
 [node name="detail_layer2" type="TileMapLayer" parent="." unique_id=225815610]
-position = Vector2(1088, 754)
+position = Vector2(1088, 781)
 tile_map_data = PackedByteArray("AAC7/8//AAAaAB0AAAC8/8//AAAbAB0AAAC7/87/AAAaAB0AAAC8/87/AAAbAB0AAAC7/83/AAAaAB0AAAC8/83/AAAbAB0AAAC7/8z/AAAaAB0AAAC8/8z/AAAbAB0AAAA=")
 tile_set = SubResource("TileSet_xbhq3")
 
 [node name="building" type="TileMapLayer" parent="." unique_id=1652311285]
-position = Vector2(1088, 754)
+position = Vector2(1088, 781)
 tile_map_data = PackedByteArray("AAC+/8z/AAAcAB8AAAC+/83/AAAcABsAAAC+/87/AAAcABsAAAC+/8//AAAcABsAAAC+/9D/AAAcABwAAAC+/9H/AAARAB4AAAC9/9D/AAAbABwAAAC8/9D/AAAYABwAAAC7/9D/AAAYABwAAAC6/8//AAAVABsAAAC6/9D/AAAVABwAAAC9/8//AAAbABsAAAC9/87/AAAbABsAAAC9/83/AAAbABsAAAC6/83/AAAVABsAAAC6/87/AAAVABsAAAC5/8//AAAUABsAAAC5/9D/AAAUABwAAAC5/9H/AAAUAB0AAAC5/87/AAAUABsAAAC5/83/AAAUABsAAAC9/8z/AAAbAB8AAAC6/8z/AAAVAB8AAAC5/8z/AAAUAB8AAAC6/9H/AAAXABwAAAC7/9H/AAAXABwAAAC8/9H/AAAXABwAAAC9/9H/AAAXABwAAAC7/8z/AAAYAB8AAAC8/8z/AAAYAB8AAAA=")
 tile_set = SubResource("TileSet_xbhq3")

@@ -3499,15 +3499,15 @@ sources/0 = SubResource("TileSetAtlasSource_sr1lu")
 script = ExtResource("1_xefvm")
 
 [node name="building" type="TileMapLayer" parent="." unique_id=1945648141]
-position = Vector2(1160, 776)
+position = Vector2(1160, 792)
 tile_map_data = PackedByteArray("AAC2/87/AAAQABwAAAC2/8//AAAhAB0AAAC3/87/AAAQABwAAAC3/8//AAAkABwAAAC4/87/AAAQABwAAAC4/8//AAAhAB0AAAC5/83/AAARABsAAAC5/87/AAARABwAAAC5/8//AAARAB0AAAC1/83/AAAPABsAAAC1/87/AAAPABwAAAC1/8//AAAPAB0AAAC1/8z/AAAPABkAAAC5/8z/AAARABkAAAC2/8z/AAAQABkAAAC3/8z/AAAQABkAAAC4/8z/AAAQABkAAAC2/83/AAAWAB0AAGC3/83/AAAWAB0AAGC4/83/AAAWAB0AAGA=")
 tile_set = SubResource("TileSet_goaca")
 
 [node name="detail_layer1" type="TileMapLayer" parent="." unique_id=225815610]
-position = Vector2(1160, 776)
+position = Vector2(1160, 792)
 tile_map_data = PackedByteArray("AAC3/8//AAAeAB8AAAC2/8//AAAeAB8AAAC4/8//AAAeAB8AAAA=")
 tile_set = SubResource("TileSet_goaca")
 
 [node name="detail_layer2" type="TileMapLayer" parent="." unique_id=1600428960]
-position = Vector2(2320, 1552)
+position = Vector2(2320, 1568)
 tile_set = SubResource("TileSet_xbhq3")
