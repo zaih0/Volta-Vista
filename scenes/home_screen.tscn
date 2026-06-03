@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://frxowme0esdo"]
 
 [ext_resource type="Script" uid="uid://bsc8p3msgd3f1" path="res://scripts/home_screen.gd" id="1_ked1l"]
-[ext_resource type="Texture2D" uid="uid://ct3eer5blk028" path="res://assets/buttons/green/button.png" id="1_lapbl"]
-[ext_resource type="Texture2D" uid="uid://5uc11tr7x8gt" path="res://assets/buttons/green/click.png" id="2_tjifo"]
-[ext_resource type="Texture2D" uid="uid://vyxx1k6wd6ip" path="res://assets/buttons/green/hover.png" id="2_ujmiq"]
-[ext_resource type="FontFile" uid="uid://cxymlhu45rumf" path="res://assets/fonts/basis33.ttf" id="3_ked1l"]
+[ext_resource type="PackedScene" uid="uid://dakbcu74pgmrx" path="res://scenes/map.tscn" id="2_ih2x6"]
+[ext_resource type="Texture2D" uid="uid://j0h0schlcvyr" path="res://assets/ui/buttons/basic/button.png" id="3_ked1l"]
+[ext_resource type="Texture2D" uid="uid://b2pt8isaywd6f" path="res://assets/ui/buttons/basic/button_click.png" id="4_b02wa"]
+[ext_resource type="Texture2D" uid="uid://c4p3tlqr0qdwy" path="res://assets/ui/buttons/basic/button_hover.png" id="5_15ihl"]
 
 [sub_resource type="Theme" id="Theme_3813x"]
 default_font_size = 40
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujmiq"]
-texture = ExtResource("1_lapbl")
+texture = ExtResource("3_ked1l")
 texture_margin_left = 12.0
 texture_margin_top = 12.0
 texture_margin_right = 12.0
@@ -18,14 +18,14 @@ texture_margin_bottom = 12.0
 region_rect = Rect2(0, 0, 32, 32)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bie51"]
-texture = ExtResource("2_tjifo")
+texture = ExtResource("4_b02wa")
 texture_margin_left = 12.0
 texture_margin_top = 12.0
 texture_margin_right = 12.0
 texture_margin_bottom = 12.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjifo"]
-texture = ExtResource("2_ujmiq")
+texture = ExtResource("5_15ihl")
 texture_margin_left = 12.0
 texture_margin_top = 12.0
 texture_margin_right = 12.0
@@ -39,6 +39,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ked1l")
+
+[node name="map" parent="." unique_id=1015157992 instance=ExtResource("2_ih2x6")]
 
 [node name="backgroundImage" type="TextureRect" parent="." unique_id=510714837]
 layout_mode = 0
@@ -54,13 +56,15 @@ color = Color(0.5019608, 0.5019608, 0.5019608, 0.47843137)
 
 [node name="title" type="Label" parent="." unique_id=488155031]
 layout_mode = 0
-offset_left = 880.0
-offset_top = 400.0
-offset_right = 1863.0
-offset_bottom = 700.0
-theme_override_fonts/font = ExtResource("3_ked1l")
+offset_left = 848.0
+offset_top = 340.0
+offset_right = 1831.0
+offset_bottom = 640.0
+theme_override_colors/font_color = Color(0.94593924, 0.8384564, 0.6975778, 1)
 theme_override_font_sizes/font_size = 160
 text = "VOLTA VISTA"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="buttons" type="GridContainer" parent="." unique_id=119459236]
 layout_mode = 0
@@ -68,41 +72,52 @@ offset_left = 25.0
 offset_top = 245.0
 offset_right = 775.0
 offset_bottom = 745.0
+theme_override_constants/v_separation = 15
 
 [node name="button1" type="Button" parent="buttons" unique_id=1049100157]
-modulate = Color(1, 1, 1, 0.7529412)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_3813x")
-theme_override_fonts/font = ExtResource("3_ked1l")
-theme_override_font_sizes/font_size = 0
+theme_override_colors/font_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_constants/h_separation = 0
+theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
 text = "Start Game"
 
 [node name="button2" type="Button" parent="buttons" unique_id=944051874]
-modulate = Color(1, 1, 1, 0.7529412)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_3813x")
-theme_override_fonts/font = ExtResource("3_ked1l")
-theme_override_font_sizes/font_size = 0
+theme_override_colors/font_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
 text = "Load Game"
 
 [node name="button3" type="Button" parent="buttons" unique_id=1819979208]
-modulate = Color(1, 1, 1, 0.7529412)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_3813x")
-theme_override_fonts/font = ExtResource("3_ked1l")
-theme_override_font_sizes/font_size = 0
+theme_override_colors/font_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_ujmiq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
