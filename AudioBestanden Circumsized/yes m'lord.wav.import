@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ck8gyyu56uxs2"
+path="res://.godot/imported/yes m'lord.wav-ee5f6f4f10b2cd93288a77197f4afd14.sample"
+
+[deps]
+
+source_file="res://AudioBestanden Circumsized/yes m'lord.wav"
+dest_files=["res://.godot/imported/yes m'lord.wav-ee5f6f4f10b2cd93288a77197f4afd14.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

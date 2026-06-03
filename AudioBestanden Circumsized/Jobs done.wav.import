@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clselvdjpp8rr"
+path="res://.godot/imported/Jobs done.wav-7e52a40f970dfd2bfdadc94f69ce8cc8.sample"
+
+[deps]
+
+source_file="res://AudioBestanden Circumsized/Jobs done.wav"
+dest_files=["res://.godot/imported/Jobs done.wav-7e52a40f970dfd2bfdadc94f69ce8cc8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
