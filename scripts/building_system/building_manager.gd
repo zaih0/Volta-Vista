@@ -50,7 +50,7 @@ func toggle_build_mode():
 
 
 func select_building(scene: PackedScene):
-
+	print("building changed")
 	current_scene = scene
 
 	if build_mode:

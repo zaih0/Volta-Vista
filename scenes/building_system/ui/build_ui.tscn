@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b33ggtqkfvxpm"]
 
-[ext_resource type="Script" uid="uid://b2xpblyvundav" path="res://scripts/building_system/load_building_cards.gd" id="1_6iemf"]
+[ext_resource type="Script" uid="uid://b2xpblyvundav" path="res://scripts/building_system/setup_build_ui.gd" id="1_6iemf"]
 [ext_resource type="PackedScene" uid="uid://44qmr8wemwjf" path="res://scenes/building_system/ui/building_card.tscn" id="2_13o7g"]
 [ext_resource type="Texture2D" uid="uid://j0h0schlcvyr" path="res://assets/ui/buttons/basic/button.png" id="3_7d2ur"]
 [ext_resource type="Texture2D" uid="uid://c4p3tlqr0qdwy" path="res://assets/ui/buttons/basic/button_hover.png" id="4_wm0nu"]
@@ -61,11 +61,17 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
 
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1136536448]
+[node name="catagory_container" type="HBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=176493445]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer2" unique_id=1623922928]
+[node name="close_button_container" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=206356461]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="exit_button" type="Button" parent="VBoxContainer/HBoxContainer/close_button_container" unique_id=1903787965]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6337604, 0.47791362, 0.25573793, 1)
 theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
@@ -77,47 +83,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_pk7sr")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5sej6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qxan8")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_7d2ur")
-text = "Housing"
-
-[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1339548065]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer3" unique_id=1739235989]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.6337604, 0.47791362, 0.25573793, 1)
-theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
-theme_override_colors/font_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
-theme_override_colors/font_hover_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_pk7sr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5sej6")
-theme_override_styles/hover = SubResource("StyleBoxTexture_qxan8")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_7d2ur")
-text = "Electricity"
-
-[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1520079859]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer4" unique_id=1597779460]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.6337604, 0.47791362, 0.25573793, 1)
-theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
-theme_override_colors/font_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
-theme_override_colors/font_hover_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_pk7sr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5sej6")
-theme_override_styles/hover = SubResource("StyleBoxTexture_qxan8")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_7d2ur")
-text = "Nature"
-
-[node name="MarginContainer5" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=206356461]
-layout_mode = 2
-size_flags_horizontal = 3
+text = "X"
 
 [node name="scroll_box" type="ScrollContainer" parent="VBoxContainer" unique_id=549092338]
 layout_mode = 2
