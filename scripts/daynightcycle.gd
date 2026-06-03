@@ -8,7 +8,7 @@ var was_night: bool = false
 @onready var canvas_modulate: CanvasModulate = $CanvasModulate
 
 # Length of a full in-game day in real seconds.
-@export var day_length_seconds: float = 1500.0
+@export var day_length_seconds: float = 900.0
 
 # 0.0 = midnight, 0.25 = sunrise, 0.5 = noon, 0.75 = sunset
 var time_of_day: float = 0.25
