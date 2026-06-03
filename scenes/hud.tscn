@@ -1,119 +1,84 @@
 [gd_scene format=3 uid="uid://dyljcfpnqst8p"]
 
-[ext_resource type="FontFile" uid="uid://cxymlhu45rumf" path="res://assets/fonts/basis33.ttf" id="1_6fi6k"]
+[ext_resource type="Texture2D" uid="uid://bwpa7b3rnlssu" path="res://assets/construction_100dp_EA3323_FILL0_wght400_GRAD0_opsz48.png" id="1_oo0fn"]
 [ext_resource type="Texture2D" uid="uid://ct3eer5blk028" path="res://assets/buttons/green/button.png" id="2_uo2fv"]
-[ext_resource type="Texture2D" uid="uid://5uc11tr7x8gt" path="res://assets/buttons/green/click.png" id="3_047uy"]
-[ext_resource type="Texture2D" uid="uid://vyxx1k6wd6ip" path="res://assets/buttons/green/hover.png" id="4_5pdws"]
 
-[sub_resource type="Theme" id="Theme_hd3ao"]
-default_font_size = 40
+[sub_resource type="Theme" id="Theme_oo0fn"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0i1j5"]
-texture = ExtResource("2_uo2fv")
-texture_margin_left = 12.0
-texture_margin_top = 12.0
-texture_margin_right = 12.0
-texture_margin_bottom = 12.0
-region_rect = Rect2(0, 0, 32, 32)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mphia"]
-texture = ExtResource("3_047uy")
-texture_margin_left = 12.0
-texture_margin_top = 12.0
-texture_margin_right = 12.0
-texture_margin_bottom = 12.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0m4u7"]
-texture = ExtResource("4_5pdws")
-texture_margin_left = 12.0
-texture_margin_top = 12.0
-texture_margin_right = 12.0
-texture_margin_bottom = 12.0
-
-[node name="hud" type="Control" unique_id=1959446401]
+[node name="HUD" type="Control" unique_id=1011786825]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1193206217]
+[node name="GUI" type="MarginContainer" parent="." unique_id=1648319146]
 layout_mode = 0
-offset_top = 1000.0
 offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0.796243, 0.796243, 0.796243, 1)
+offset_bottom = 100.0
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=1076689511]
+[node name="ColorRect" type="ColorRect" parent="GUI" unique_id=886098222]
+layout_mode = 2
+color = Color(0.71510535, 0.71510524, 0.71510524, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI" unique_id=849274317]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Bars" type="VBoxContainer" parent="GUI/HBoxContainer" unique_id=1852488250]
+layout_mode = 2
+
+[node name="Bar" type="HBoxContainer" parent="GUI/HBoxContainer/Bars" unique_id=264923206]
+layout_mode = 2
+
+[node name="Count" type="MarginContainer" parent="GUI/HBoxContainer/Bars/Bar" unique_id=54596791]
+layout_mode = 2
+size_flags_stretch_ratio = 1.03
+
+[node name="Control" type="Control" parent="GUI/HBoxContainer/Bars/Bar/Count" unique_id=536193428]
+layout_mode = 2
+
+[node name="Button" type="MenuButton" parent="GUI/HBoxContainer/Bars/Bar/Count/Control" unique_id=1272390290]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 108.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_oo0fn")
+theme_override_colors/icon_normal_color = Color(1, 0, 1, 1)
+icon = ExtResource("1_oo0fn")
+
+[node name="Background" type="NinePatchRect" parent="GUI/HBoxContainer/Bars/Bar/Count/Control/Button" unique_id=303167101]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 10.0
-offset_top = 1005.0
-offset_right = 1910.0
-offset_bottom = 1075.0
-columns = 5
+offset_right = 100.0
+offset_bottom = 100.0
 
-[node name="button1" type="Button" parent="GridContainer" unique_id=1321019079]
-modulate = Color(1, 1, 1, 0.7529412)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = SubResource("Theme_hd3ao")
-theme_override_fonts/font = ExtResource("1_6fi6k")
-theme_override_font_sizes/font_size = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_0i1j5")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_mphia")
-theme_override_styles/hover = SubResource("StyleBoxTexture_0m4u7")
-text = "Start Game"
+[node name="Number" type="Label" parent="GUI/HBoxContainer/Bars/Bar/Count/Control/Button/Background" unique_id=86919094]
+visible = false
+layout_mode = 0
+offset_left = 294.0
+offset_top = 1.0
+offset_right = 313.0
+offset_bottom = 50.0
+text = "10
+"
 
-[node name="button2" type="Button" parent="GridContainer" unique_id=1690854632]
-modulate = Color(1, 1, 1, 0.7529412)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = SubResource("Theme_hd3ao")
-theme_override_fonts/font = ExtResource("1_6fi6k")
-theme_override_font_sizes/font_size = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_0i1j5")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_mphia")
-theme_override_styles/hover = SubResource("StyleBoxTexture_0m4u7")
-text = "Start Game"
+[node name="Title" type="TextureRect" parent="GUI/HBoxContainer/Bars/Bar/Count/Control/Button/Background" unique_id=15080043]
+visible = false
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 32.0
+texture = ExtResource("2_uo2fv")
+stretch_mode = 3
 
-[node name="button3" type="Button" parent="GridContainer" unique_id=2014137385]
-modulate = Color(1, 1, 1, 0.7529412)
+[node name="Counters" type="HBoxContainer" parent="GUI/HBoxContainer/Bars" unique_id=2004869334]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = SubResource("Theme_hd3ao")
-theme_override_fonts/font = ExtResource("1_6fi6k")
-theme_override_font_sizes/font_size = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_0i1j5")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_mphia")
-theme_override_styles/hover = SubResource("StyleBoxTexture_0m4u7")
-text = "Start Game"
-
-[node name="button4" type="Button" parent="GridContainer" unique_id=746062386]
-modulate = Color(1, 1, 1, 0.7529412)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = SubResource("Theme_hd3ao")
-theme_override_fonts/font = ExtResource("1_6fi6k")
-theme_override_font_sizes/font_size = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_0i1j5")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_mphia")
-theme_override_styles/hover = SubResource("StyleBoxTexture_0m4u7")
-text = "Start Game"
-
-[node name="button5" type="Button" parent="GridContainer" unique_id=1341663918]
-modulate = Color(1, 1, 1, 0.7529412)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = SubResource("Theme_hd3ao")
-theme_override_fonts/font = ExtResource("1_6fi6k")
-theme_override_font_sizes/font_size = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_0i1j5")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_mphia")
-theme_override_styles/hover = SubResource("StyleBoxTexture_0m4u7")
-text = "Start Game"
