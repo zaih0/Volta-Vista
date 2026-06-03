@@ -3,7 +3,7 @@ extends MarginContainer
 signal building_selected(scene: PackedScene)
 
 @onready var title_label = $VBoxContainer/title
-@onready var content_container = $VBoxContainer/building_preview/preview_container
+@onready var content_container = $VBoxContainer/HBoxContainer/building_preview/preview_container
 
 var building_scene: PackedScene
 

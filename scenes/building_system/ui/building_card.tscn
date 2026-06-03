@@ -1,30 +1,78 @@
 [gd_scene format=3 uid="uid://44qmr8wemwjf"]
 
 [ext_resource type="Script" uid="uid://caa2ihra0a5yq" path="res://scripts/building_system/building_card.gd" id="1_s41ql"]
+[ext_resource type="Texture2D" uid="uid://cqawfmywc444n" path="res://assets/ui/frame/UI_frame.png" id="2_i4sgl"]
+[ext_resource type="Texture2D" uid="uid://j0h0schlcvyr" path="res://assets/ui/buttons/basic/button.png" id="3_o1g44"]
 
 [node name="building_card" type="MarginContainer" unique_id=1070117985]
-custom_minimum_size = Vector2(330, 300)
+custom_minimum_size = Vector2(220, 220)
+offset_right = 150.0
+offset_bottom = 150.0
 script = ExtResource("1_s41ql")
 
-[node name="background" type="ColorRect" parent="." unique_id=1230606041]
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1788941317]
 layout_mode = 2
-color = Color(0, 0.61960787, 0.91764706, 0.5921569)
+texture = ExtResource("2_i4sgl")
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=305497426]
 layout_mode = 2
 
-[node name="building_preview" type="MarginContainer" parent="VBoxContainer" unique_id=407090473]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=153898163]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=289427749]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
-[node name="preview_container" type="Node2D" parent="VBoxContainer/building_preview" unique_id=1564391395]
-position = Vector2(170, 180)
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1580899239]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="building_preview" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=407090473]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/HBoxContainer/building_preview" unique_id=780910020]
+layout_mode = 2
+texture = ExtResource("3_o1g44")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 6
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="preview_container" type="Node2D" parent="VBoxContainer/HBoxContainer/building_preview" unique_id=1564391395]
+position = Vector2(99, 77)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=2047638373]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
 
 [node name="title" type="Label" parent="VBoxContainer" unique_id=1348309811]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 25
 text = "Title"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=762834056]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
