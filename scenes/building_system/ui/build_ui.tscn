@@ -66,13 +66,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
 
-[node name="close_button_container" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=206356461]
+[node name="exit_button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1903787965]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
-
-[node name="exit_button" type="Button" parent="VBoxContainer/HBoxContainer/close_button_container" unique_id=1903787965]
-layout_mode = 2
 theme_override_colors/font_color = Color(0.6337604, 0.47791362, 0.25573793, 1)
 theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
 theme_override_colors/font_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)

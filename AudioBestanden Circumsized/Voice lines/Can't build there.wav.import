@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://qnnb2n3kput7"
-path="res://.godot/imported/Can't build there.wav-fd2749223295a556bd0263b405e6b9b1.sample"
+path="res://.godot/imported/Can't build there.wav-418de8089fb3cded652c40c4650c54da.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Can't build there.wav"
-dest_files=["res://.godot/imported/Can't build there.wav-fd2749223295a556bd0263b405e6b9b1.sample"]
+source_file="res://AudioBestanden Circumsized/Voice lines/Can't build there.wav"
+dest_files=["res://.godot/imported/Can't build there.wav-418de8089fb3cded652c40c4650c54da.sample"]
 
 [params]
 

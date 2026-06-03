@@ -2,12 +2,14 @@ extends MarginContainer
 
 signal building_selected(scene: PackedScene)
 signal catagory_changed(catagory: catagories)
-
+signal close_build_menu()
 
 @export var card_scene: PackedScene
 
 @onready var card_container = $"VBoxContainer/scroll_box/buildings_container"
 @onready var catagory_container = $"VBoxContainer/HBoxContainer/catagory_container"
+@onready var close_button = $"VBoxContainer/HBoxContainer/exit_button"
+
 
 @onready var catagory_button = preload("res://scenes/building_system/ui/catagory_button.tscn")
 
@@ -39,6 +41,10 @@ func _ready() -> void:
 		create_card(
 			placeable
 		)
+	close_button.pressed.connect(_on_close_button_pressed)
+
+func _on_close_button_pressed():
+	close_build_menu.emit()
 
 func create_catagory_buttons():
 	for catagory in catagories.values():

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dbar40ky7c1r4"
-path="res://.godot/imported/Warcraft 3 Blacksmith Voice track.mp3-a232f52ca998c638f395284ddb322e53.mp3str"
+path="res://.godot/imported/Warcraft 3 Blacksmith Voice track.mp3-58147114db980eea3154f669be608f7e.mp3str"
 
 [deps]
 
-source_file="res://AudioBestanden UnCircumsized/Warcraft 3 Blacksmith Voice track.mp3"
-dest_files=["res://.godot/imported/Warcraft 3 Blacksmith Voice track.mp3-a232f52ca998c638f395284ddb322e53.mp3str"]
+source_file="res://AudioBestanden Circumsized/Unedited audio/Warcraft 3 Blacksmith Voice track.mp3"
+dest_files=["res://.godot/imported/Warcraft 3 Blacksmith Voice track.mp3-58147114db980eea3154f669be608f7e.mp3str"]
 
 [params]
 

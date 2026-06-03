@@ -20,7 +20,6 @@ func setup(title: String, scene_path: String, preview_scale: float):
 
 	content.scale = Vector2(preview_scale, preview_scale)
 
-
 func _gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
