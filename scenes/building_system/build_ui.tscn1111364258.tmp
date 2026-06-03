@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://b33ggtqkfvxpm"]
+
+[ext_resource type="Script" uid="uid://b2xpblyvundav" path="res://scenes/building/load_building_cards.gd" id="1_6iemf"]
+[ext_resource type="PackedScene" uid="uid://ckegh62goxrab" path="res://scenes/building/house.tscn" id="1_udcqn"]
+
+[sub_resource type="GDScript" id="GDScript_pomtd"]
+script/source = "extends MarginContainer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="build_ui" type="MarginContainer" unique_id=769331028]
+offset_top = 680.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1773099948]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=2076067143]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1136536448]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/MarginContainer2" unique_id=755223687]
+layout_mode = 2
+color = Color(0.22352941, 0.22352941, 0.22352941, 0.5137255)
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2" unique_id=658897731]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 45
+text = "Housing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1339548065]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/MarginContainer3" unique_id=399379344]
+layout_mode = 2
+color = Color(0.22352941, 0.22352941, 0.22352941, 0.5137255)
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer3" unique_id=1538825890]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 45
+text = "Electricity"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1520079859]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/MarginContainer4" unique_id=1764099343]
+layout_mode = 2
+color = Color(0.22352941, 0.22352941, 0.22352941, 0.5137255)
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer4" unique_id=889499376]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 45
+text = "Nature"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer5" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=206356461]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/MarginContainer5" unique_id=64314428]
+layout_mode = 2
+color = Color(0.22352941, 0.22352941, 0.22352941, 0.5137255)
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer5" unique_id=1273154459]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="scroll_box" type="ScrollContainer" parent="VBoxContainer" unique_id=549092338]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="buildings_container" type="HBoxContainer" parent="VBoxContainer/scroll_box" unique_id=1979738136]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_6iemf")
+
+[node name="building_card" type="MarginContainer" parent="VBoxContainer/scroll_box/buildings_container" unique_id=584310955]
+custom_minimum_size = Vector2(330, 300)
+layout_mode = 2
+
+[node name="background" type="ColorRect" parent="VBoxContainer/scroll_box/buildings_container/building_card" unique_id=2306576]
+layout_mode = 2
+color = Color(0, 0.61960787, 0.91764706, 0.3254902)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/scroll_box/buildings_container/building_card" unique_id=549214253]
+layout_mode = 2
+
+[node name="building_preview" type="MarginContainer" parent="VBoxContainer/scroll_box/buildings_container/building_card/VBoxContainer" unique_id=736860860]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+script = SubResource("GDScript_pomtd")
+
+[node name="offset" type="Node2D" parent="VBoxContainer/scroll_box/buildings_container/building_card/VBoxContainer/building_preview" unique_id=1198169038]
+position = Vector2(170, 180)
+
+[node name="House" parent="VBoxContainer/scroll_box/buildings_container/building_card/VBoxContainer/building_preview/offset" unique_id=29287472 instance=ExtResource("1_udcqn")]
+scale = Vector2(2.5, 2.5)
+
+[node name="title" type="Label" parent="VBoxContainer/scroll_box/buildings_container/building_card/VBoxContainer" unique_id=307370656]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "House"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="building_card2" type="MarginContainer" parent="VBoxContainer/scroll_box/buildings_container" unique_id=1019624952]
+custom_minimum_size = Vector2(330, 300)
+layout_mode = 2
+
+[node name="background" type="ColorRect" parent="VBoxContainer/scroll_box/buildings_container/building_card2" unique_id=1837344485]
+layout_mode = 2
+color = Color(0, 0.61960787, 0.91764706, 0.3254902)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/scroll_box/buildings_container/building_card2" unique_id=190505109]
+layout_mode = 2
+
+[node name="building_preview" type="MarginContainer" parent="VBoxContainer/scroll_box/buildings_container/building_card2/VBoxContainer" unique_id=1515472860]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+script = SubResource("GDScript_pomtd")
+
+[node name="offset" type="Node2D" parent="VBoxContainer/scroll_box/buildings_container/building_card2/VBoxContainer/building_preview" unique_id=1527524488]
+position = Vector2(170, 180)
+
+[node name="House" parent="VBoxContainer/scroll_box/buildings_container/building_card2/VBoxContainer/building_preview/offset" unique_id=639066832 instance=ExtResource("1_udcqn")]
+scale = Vector2(2.5, 2.5)
+
+[node name="Label" type="Label" parent="VBoxContainer/scroll_box/buildings_container/building_card2/VBoxContainer" unique_id=361133706]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "House"
+horizontal_alignment = 1
+vertical_alignment = 1
