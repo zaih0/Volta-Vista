@@ -33,7 +33,8 @@ func _input(event):
 			preview_controller.rotate_preview()
 
 	if build_mode and event.is_action_pressed("left_click"):
-		place_building()
+		if !get_viewport().gui_get_hovered_control():
+			place_building()
 
 	if build_mode and event.is_action_pressed("right_click"):
 		if grid_validator:
