@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="4_iywne"]
 [ext_resource type="Script" uid="uid://dru0vr4l54h5o" path="res://scenes/grid_validator.gd" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b33ggtqkfvxpm" path="res://scenes/building_system/ui/build_ui.tscn" id="5_iywne"]
+[ext_resource type="Script" uid="uid://2xufa623xf0c" path="res://scenes/pause_menu.gd" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
 texture = ExtResource("4_iywne")
@@ -1788,6 +1789,8 @@ custom_data_layer_0/name = "buildable"
 custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_p57ef")
 
+[sub_resource type="Theme" id="Theme_gee14"]
+
 [node name="game" type="Node2D" unique_id=501190735]
 
 [node name="map" type="Node2D" parent="." unique_id=791872628]
@@ -1889,3 +1892,78 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="build_ui" parent="CanvasLayer" unique_id=769331028 instance=ExtResource("5_iywne")]
+
+[node name="pause" type="CanvasLayer" parent="." unique_id=1399682814]
+
+[node name="PauseMenu" type="Control" parent="pause" unique_id=1287586990]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_u5sy4")
+
+[node name="ColorRect" type="ColorRect" parent="pause/PauseMenu" unique_id=378048658]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.35686275)
+
+[node name="CenterContainer" type="CenterContainer" parent="pause/PauseMenu" unique_id=1018794961]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="pause/PauseMenu/CenterContainer" unique_id=168973834]
+custom_minimum_size = Vector2(500, 400)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="pause/PauseMenu/CenterContainer/Panel" unique_id=2105456777]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 48.0
+offset_right = 50.0
+offset_bottom = 83.0
+grow_horizontal = 2
+text = "Pause Menu"
+tab_size = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="pause/PauseMenu/CenterContainer/Panel" unique_id=1878995934]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -101.0
+offset_right = 35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pause/PauseMenu/CenterContainer/Panel/MarginContainer" unique_id=2053618646]
+layout_mode = 2
+theme = SubResource("Theme_gee14")
+
+[node name="ResumeButton" type="Button" parent="pause/PauseMenu/CenterContainer/Panel/MarginContainer/VBoxContainer" unique_id=371939094]
+layout_mode = 2
+text = "Resume"
+
+[node name="RestartButton" type="Button" parent="pause/PauseMenu/CenterContainer/Panel/MarginContainer/VBoxContainer" unique_id=116987747]
+layout_mode = 2
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="pause/PauseMenu/CenterContainer/Panel/MarginContainer/VBoxContainer" unique_id=649331046]
+layout_mode = 2
+text = "Quit"
