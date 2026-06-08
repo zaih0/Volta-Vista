@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://clselvdjpp8rr"
-path="res://.godot/imported/Jobs done.wav-7e52a40f970dfd2bfdadc94f69ce8cc8.sample"
+path="res://.godot/imported/Jobs done.wav-e95deaf0a3e12aa379d666c91f6e514a.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Jobs done.wav"
-dest_files=["res://.godot/imported/Jobs done.wav-7e52a40f970dfd2bfdadc94f69ce8cc8.sample"]
+source_file="res://AudioBestanden Circumsized/Voice lines/Jobs done.wav"
+dest_files=["res://.godot/imported/Jobs done.wav-e95deaf0a3e12aa379d666c91f6e514a.sample"]
 
 [params]
 

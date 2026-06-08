@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dnntpxpsb1kqo"
-path="res://.godot/imported/Warcraft 3 Lumber Mill Voice track.mp3-ce6b5e7dbcea9be607b83515d22410df.mp3str"
+path="res://.godot/imported/Warcraft 3 Lumber Mill Voice track.mp3-70c0cca4989f28bc300529c2ce176d9c.mp3str"
 
 [deps]
 
-source_file="res://AudioBestanden UnCircumsized/Warcraft 3 Lumber Mill Voice track.mp3"
-dest_files=["res://.godot/imported/Warcraft 3 Lumber Mill Voice track.mp3-ce6b5e7dbcea9be607b83515d22410df.mp3str"]
+source_file="res://AudioBestanden Circumsized/Unedited audio/Warcraft 3 Lumber Mill Voice track.mp3"
+dest_files=["res://.godot/imported/Warcraft 3 Lumber Mill Voice track.mp3-70c0cca4989f28bc300529c2ce176d9c.mp3str"]
 
 [params]
 

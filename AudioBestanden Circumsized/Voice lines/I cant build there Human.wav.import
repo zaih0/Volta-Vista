@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://pkr3amafaq2"
-path="res://.godot/imported/I cant build there Human.wav-bcaaa4d512ec47cd06c59c2cb856ebce.sample"
+path="res://.godot/imported/I cant build there Human.wav-1bde51bc249bdee04a714bb84ad6168d.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/I cant build there Human.wav"
-dest_files=["res://.godot/imported/I cant build there Human.wav-bcaaa4d512ec47cd06c59c2cb856ebce.sample"]
+source_file="res://AudioBestanden Circumsized/Voice lines/I cant build there Human.wav"
+dest_files=["res://.godot/imported/I cant build there Human.wav-1bde51bc249bdee04a714bb84ad6168d.sample"]
 
 [params]
 
