@@ -1,8 +1,8 @@
 extends Control
 
-@onready var resume_button = $CenterContainer/Panel/MarginContainer/VBoxContainer/ResumeButton
-@onready var restart_button = $CenterContainer/Panel/MarginContainer/VBoxContainer/RestartButton
-@onready var quit_button = $CenterContainer/Panel/MarginContainer/VBoxContainer/QuitButton
+@onready var resume_button = $"MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/ResumeButton"
+@onready var restart_button = $"MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/RestartButton"
+@onready var quit_button = $"MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/QuitButton"
 
 func _ready():
 	visible = false

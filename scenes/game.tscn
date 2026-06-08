@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" uid="uid://c2ruy2qvbe1vn" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="Script" uid="uid://i3oceddvgj5n" path="res://scenes/preview_controller.gd" id="2_lbhrr"]
-[ext_resource type="Script" path="res://scenes/camera_2d.gd" id="2_lnu2h"]
+[ext_resource type="Script" uid="uid://csi7c5wx78uc1" path="res://scenes/camera_2d.gd" id="2_lnu2h"]
 [ext_resource type="Script" uid="uid://cyuv4keu3b3ap" path="res://scripts/building_system/building_manager.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="4_iywne"]
 [ext_resource type="Script" uid="uid://dru0vr4l54h5o" path="res://scenes/grid_validator.gd" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b33ggtqkfvxpm" path="res://scenes/building_system/ui/build_ui.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://2xufa623xf0c" path="res://scenes/pause_menu.gd" id="7_u5sy4"]
+[ext_resource type="FontFile" uid="uid://cxymlhu45rumf" path="res://assets/fonts/basis33.ttf" id="9_dinhu"]
+[ext_resource type="Texture2D" uid="uid://j0h0schlcvyr" path="res://assets/ui/buttons/basic/button.png" id="10_kvuet"]
+[ext_resource type="Texture2D" uid="uid://b2pt8isaywd6f" path="res://assets/ui/buttons/basic/button_click.png" id="11_trtic"]
+[ext_resource type="Texture2D" uid="uid://c4p3tlqr0qdwy" path="res://assets/ui/buttons/basic/button_hover.png" id="12_ir15t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
 texture = ExtResource("4_iywne")
@@ -7077,6 +7081,31 @@ sources/0 = SubResource("TileSetAtlasSource_gee14")
 
 [sub_resource type="Theme" id="Theme_gee14"]
 
+[sub_resource type="Theme" id="Theme_ca42v"]
+default_font_size = 40
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rysoc"]
+texture = ExtResource("10_kvuet")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ssvqc"]
+texture = ExtResource("11_trtic")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_264po"]
+texture = ExtResource("12_ir15t")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
 [node name="game" type="Node2D" unique_id=501190735]
 
 [node name="map" type="TileMapLayer" parent="." unique_id=427580702]
@@ -7304,15 +7333,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("7_u5sy4")
 
-[node name="ColorRect" type="ColorRect" parent="pause/PauseMenu" unique_id=378048658]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.35686275)
-
 [node name="CenterContainer" type="CenterContainer" parent="pause/PauseMenu" unique_id=1018794961]
 layout_mode = 1
 anchors_preset = 15
@@ -7321,48 +7341,109 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="pause/PauseMenu/CenterContainer" unique_id=168973834]
-custom_minimum_size = Vector2(500, 400)
+[node name="MarginContainer" type="MarginContainer" parent="pause/PauseMenu" unique_id=1745294163]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="pause/PauseMenu/MarginContainer" unique_id=378048658]
+layout_mode = 2
+color = Color(0, 0, 0, 0.35686275)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pause/PauseMenu/MarginContainer" unique_id=1765924657]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="pause/PauseMenu/CenterContainer/Panel" unique_id=2105456777]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -50.0
-offset_top = 48.0
-offset_right = 50.0
-offset_bottom = 83.0
-grow_horizontal = 2
-text = "Pause Menu"
-tab_size = 5
+[node name="padding2" type="MarginContainer" parent="pause/PauseMenu/MarginContainer/HBoxContainer" unique_id=1420246190]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
 
-[node name="MarginContainer" type="MarginContainer" parent="pause/PauseMenu/CenterContainer/Panel" unique_id=1878995934]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -35.0
-offset_top = -101.0
-offset_right = 35.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="MarginContainer" type="MarginContainer" parent="pause/PauseMenu/MarginContainer/HBoxContainer" unique_id=1878995934]
+layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="pause/PauseMenu/CenterContainer/Panel/MarginContainer" unique_id=2053618646]
+[node name="VBoxContainer" type="VBoxContainer" parent="pause/PauseMenu/MarginContainer/HBoxContainer/MarginContainer" unique_id=2053618646]
 layout_mode = 2
 theme = SubResource("Theme_gee14")
 
-[node name="ResumeButton" type="Button" parent="pause/PauseMenu/CenterContainer/Panel/MarginContainer/VBoxContainer" unique_id=371939094]
+[node name="padding2" type="MarginContainer" parent="pause/PauseMenu/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=516804538]
 layout_mode = 2
-text = "Resume"
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="RestartButton" type="Button" parent="pause/PauseMenu/CenterContainer/Panel/MarginContainer/VBoxContainer" unique_id=116987747]
+[node name="RichTextLabel" type="RichTextLabel" parent="pause/PauseMenu/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=2105456777]
 layout_mode = 2
-text = "Restart"
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("9_dinhu")
+theme_override_font_sizes/normal_font_size = 64
+text = "Pause Menu"
+tab_size = 5
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="QuitButton" type="Button" parent="pause/PauseMenu/CenterContainer/Panel/MarginContainer/VBoxContainer" unique_id=649331046]
+[node name="ResumeButton" type="Button" parent="pause/PauseMenu/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=591252864]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_ca42v")
+theme_override_colors/font_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("9_dinhu")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_rysoc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ssvqc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_264po")
+text = "Resume "
+
+[node name="RestartButton" type="Button" parent="pause/PauseMenu/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1453216237]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_ca42v")
+theme_override_colors/font_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("9_dinhu")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_rysoc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ssvqc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_264po")
+text = "Restart "
+
+[node name="QuitButton" type="Button" parent="pause/PauseMenu/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=68534453]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_ca42v")
+theme_override_colors/font_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("9_dinhu")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_rysoc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ssvqc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_264po")
 text = "Quit"
+
+[node name="padding" type="MarginContainer" parent="pause/PauseMenu/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1793574515]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="padding" type="MarginContainer" parent="pause/PauseMenu/MarginContainer/HBoxContainer" unique_id=426434734]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
