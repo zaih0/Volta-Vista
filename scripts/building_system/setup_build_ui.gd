@@ -22,14 +22,14 @@ enum catagories {
 
 var placeables := [
 	{
-		"name": "House 1",
-		"scene": "res://scenes/building_system/buildings/house.tscn",
+		"name": "Small House",
+		"scene": "res://scenes/building_system/buildings/small_house.tscn",
 		"preview_scale": 2,
 		"catagory": catagories.Housing
 	},
 	{
-		"name": "House 2",
-		"scene": "res://scenes/building_system/buildings/house2.tscn",
+		"name": "Medium House",
+		"scene": "res://scenes/building_system/buildings/medium_house.tscn",
 		"preview_scale": 1.5,
 		"catagory": catagories.Housing
 	}
