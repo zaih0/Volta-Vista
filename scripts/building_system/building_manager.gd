@@ -14,6 +14,8 @@ func _ready():
 	if building_ui:
 		building_ui.building_selected.connect(select_building)
 		building_ui.visible = false
+		
+	building_ui.close_build_menu.connect(toggle_build_mode)
 
 
 func _process(delta):
@@ -31,9 +33,10 @@ func _input(event):
 			preview_controller.rotate_preview()
 
 	if build_mode and event.is_action_pressed("left_click"):
-		place_building()
+		if !get_viewport().gui_get_hovered_control():
+			place_building()
 
-	if event.is_action_pressed("right_click"):
+	if build_mode and event.is_action_pressed("right_click"):
 		if grid_validator:
 			grid_validator.delete_building()
 
@@ -47,10 +50,11 @@ func toggle_build_mode():
 		preview_controller.create_preview(current_scene)
 	else:
 		preview_controller.remove_preview()
+		current_scene = null
 
 
 func select_building(scene: PackedScene):
-
+	print("building changed")
 	current_scene = scene
 
 	if build_mode:
