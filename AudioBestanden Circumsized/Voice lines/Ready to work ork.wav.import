@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dviijc5ig5dlq"
+path="res://.godot/imported/Ready to work ork.wav-b938148fd1b39f1e9d7ca387b1a30305.sample"
+
+[deps]
+
+source_file="res://AudioBestanden Circumsized/Voice lines/Ready to work ork.wav"
+dest_files=["res://.godot/imported/Ready to work ork.wav-b938148fd1b39f1e9d7ca387b1a30305.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

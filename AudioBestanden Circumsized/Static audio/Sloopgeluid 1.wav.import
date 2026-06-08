@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btye3ml8dcpuu"
+path="res://.godot/imported/Sloopgeluid 1.wav-d3828df8f132f40080a30e0db3cf69aa.sample"
+
+[deps]
+
+source_file="res://AudioBestanden Circumsized/Static audio/Sloopgeluid 1.wav"
+dest_files=["res://.godot/imported/Sloopgeluid 1.wav-d3828df8f132f40080a30e0db3cf69aa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
