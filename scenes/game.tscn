@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2ruy2qvbe1vn" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="Script" uid="uid://i3oceddvgj5n" path="res://scenes/preview_controller.gd" id="2_lbhrr"]
-[ext_resource type="Script" path="res://scenes/camera_2d.gd" id="2_lnu2h"]
+[ext_resource type="Script" uid="uid://csi7c5wx78uc1" path="res://scenes/camera_2d.gd" id="2_lnu2h"]
 [ext_resource type="Script" uid="uid://cyuv4keu3b3ap" path="res://scripts/building_system/building_manager.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="4_iywne"]
 [ext_resource type="Script" uid="uid://dru0vr4l54h5o" path="res://scenes/grid_validator.gd" id="4_p57ef"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://j0h0schlcvyr" path="res://assets/ui/buttons/basic/button.png" id="10_kvuet"]
 [ext_resource type="Texture2D" uid="uid://b2pt8isaywd6f" path="res://assets/ui/buttons/basic/button_click.png" id="11_trtic"]
 [ext_resource type="Texture2D" uid="uid://c4p3tlqr0qdwy" path="res://assets/ui/buttons/basic/button_hover.png" id="12_ir15t"]
+[ext_resource type="Script" uid="uid://i7onktw0rufa" path="res://scenes/resource_ui.gd" id="13_kvuet"]
+[ext_resource type="Script" uid="uid://b0qwyhuopj5d2" path="res://scripts/inventory.gd" id="14_trtic"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
 texture = ExtResource("4_iywne")
@@ -7185,8 +7187,9 @@ texture_margin_bottom = 12.0
 
 [node name="game" type="Node2D" unique_id=501190735]
 
-[node name="map" type="TileMapLayer" parent="." unique_id=427580702]
+[node name="map" type="TileMapLayer" parent="." unique_id=427580702 node_paths=PackedStringArray("inventory")]
 script = ExtResource("1_u5sy4")
+inventory = NodePath("../Inventory")
 
 [node name="water_layer" type="TileMapLayer" parent="map" unique_id=387354024]
 position = Vector2(1161, 772)
@@ -7369,6 +7372,13 @@ tile_set = SubResource("TileSet_0tnpc")
 [node name="buildings" type="Node2D" parent="." unique_id=22502610]
 
 [node name="camera" type="Camera2D" parent="." unique_id=221457622]
+limit_enabled = false
+limit_left = -1410065407
+limit_top = -99999999
+limit_right = 1316134911
+limit_bottom = 276447231
+limit_smoothed = true
+editor_draw_limits = true
 script = ExtResource("2_lnu2h")
 
 [node name="building_manager" type="Node2D" parent="." unique_id=1479431133 node_paths=PackedStringArray("buildings_parent", "building_ui", "preview_controller", "grid_validator")]
@@ -7386,7 +7396,6 @@ tilemaps = [NodePath("../map/ground_layer"), NodePath("../map/top_ground_layer")
 script = ExtResource("2_lbhrr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1483493729]
-visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1563105960]
 layout_mode = 3
@@ -7400,7 +7409,6 @@ grow_vertical = 0
 [node name="build_ui" parent="CanvasLayer" unique_id=769331028 instance=ExtResource("5_iywne")]
 
 [node name="pause" type="CanvasLayer" parent="." unique_id=1399682814]
-visible = false
 
 [node name="PauseMenu" type="Control" parent="pause" unique_id=1287586990]
 process_mode = 3
@@ -7526,3 +7534,14 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.33
+
+[node name="ResourceUI" type="CanvasLayer" parent="." unique_id=2099738749]
+script = ExtResource("13_kvuet")
+
+[node name="IronCounter" type="Label" parent="ResourceUI" unique_id=973251520]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Inventory" type="Node" parent="." unique_id=809663561 node_paths=PackedStringArray("ui_node")]
+script = ExtResource("14_trtic")
+ui_node = NodePath("../ResourceUI")

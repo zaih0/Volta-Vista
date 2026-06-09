@@ -33,7 +33,7 @@ func _process(delta):
 		last_direction = current_direction
 		
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	position = position.clamp(Vector2.ZERO, Vector2(10000, 10000))
 	
 	# Zoom in/out controls
 	if Input.is_action_just_pressed("zoom_in"):

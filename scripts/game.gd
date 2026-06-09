@@ -44,19 +44,34 @@ func harvest_tile(layer: TileMapLayer, cell: Vector2i, tile_data: TileData):
 	var resource_type = tile_data.get_custom_data("resource_type")
 	var amount = tile_data.get_custom_data("resource_amount")
 
+	# FALLBACK: We zetten de laagnaam eerst om naar een normale String met str()
 	if resource_type == null or resource_type == "":
-		print("Tegel op ", layer.name, " mist 'resource_type' in Custom Data.")
-		return 
+		var layer_name_string = str(layer.name)
+		if "iron" in layer_name_string.lower():
+			resource_type = "iron"
+		else:
+			print("Tegel op ", layer.name, " mist 'resource_type' in Custom Data.")
+			return 
 
-	# Dit is de meest stabiele manier om tekst en variabelen te combineren in Godot 4
+	if amount == null or amount <= 0:
+		amount = 1
+
 	print("Succesvol geoogst uit {layer}: {amount} {type}".format({
 		"layer": layer.name,
 		"amount": amount,
 		"type": resource_type
 	}))
 
-	# Inventory check
-	if inventory != null and inventory.has_method("add_resource"):
+	# Stuur het ijzer door naar je inventory script
+	if inventory == null:
+		print("FOUT: Er is GEEN Inventory node gekoppeld in de Inspector van de 'map' node!")
+	elif not inventory.has_method("add_resource"):
+		print("FOUT: De gekoppelde Inventory node heeft geen functie genaamd 'add_resource'!")
+	else:
 		inventory.add_resource(resource_type, amount)
+
+		
+	# De 'erase_cell' regel is hier nu netjes weggehaald!
+
 
 	# Wis de ijzer-tegel op de laag waar we hem daadwerkelijk hebben gevonden
