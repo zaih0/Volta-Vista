@@ -15,6 +15,12 @@
 [ext_resource type="Script" uid="uid://i7onktw0rufa" path="res://scenes/resource_ui.gd" id="13_kvuet"]
 [ext_resource type="Script" uid="uid://b0qwyhuopj5d2" path="res://scripts/inventory.gd" id="14_trtic"]
 
+[sub_resource type="TileSet" id="TileSet_trtic"]
+custom_data_layer_0/name = "resource_type"
+custom_data_layer_0/type = 4
+custom_data_layer_1/name = "amount"
+custom_data_layer_1/type = 2
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
 texture = ExtResource("4_iywne")
 12:0/0 = 0
@@ -7187,8 +7193,11 @@ texture_margin_bottom = 12.0
 
 [node name="game" type="Node2D" unique_id=501190735]
 
-[node name="map" type="TileMapLayer" parent="." unique_id=427580702 node_paths=PackedStringArray("inventory")]
+[node name="map" type="TileMapLayer" parent="." unique_id=427580702 node_paths=PackedStringArray("build_controller", "inventory")]
+position = Vector2(-1257, -615)
+tile_set = SubResource("TileSet_trtic")
 script = ExtResource("1_u5sy4")
+build_controller = NodePath("../building_manager")
 inventory = NodePath("../Inventory")
 
 [node name="water_layer" type="TileMapLayer" parent="map" unique_id=387354024]
@@ -7395,18 +7404,40 @@ tilemaps = [NodePath("../map/ground_layer"), NodePath("../map/top_ground_layer")
 [node name="preview_controller" type="Node" parent="." unique_id=2094583979]
 script = ExtResource("2_lbhrr")
 
+[node name="ResourceUI" type="CanvasLayer" parent="." unique_id=2099738749]
+script = ExtResource("13_kvuet")
+
+[node name="IronCounter" type="Label" parent="ResourceUI" unique_id=973251520]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="WoodCounter" type="Label" parent="ResourceUI" unique_id=961776851]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="StoneCounter" type="Label" parent="ResourceUI" unique_id=1751442290]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1483493729]
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1563105960]
 layout_mode = 3
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="build_ui" parent="CanvasLayer" unique_id=769331028 instance=ExtResource("5_iywne")]
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+grow_vertical = 2
 
 [node name="pause" type="CanvasLayer" parent="." unique_id=1399682814]
 
@@ -7534,13 +7565,6 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.33
-
-[node name="ResourceUI" type="CanvasLayer" parent="." unique_id=2099738749]
-script = ExtResource("13_kvuet")
-
-[node name="IronCounter" type="Label" parent="ResourceUI" unique_id=973251520]
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="Inventory" type="Node" parent="." unique_id=809663561 node_paths=PackedStringArray("ui_node")]
 script = ExtResource("14_trtic")

@@ -24,33 +24,48 @@ func _process(delta):
 
 
 func _input(event):
-
+	# Dit opent en sluit het menu met de B-toets
 	if event.is_action_pressed("build_mode"):
 		toggle_build_mode()
 
+	# Dit roteert het gebouw
 	if event.is_action_pressed("rotate_building"):
 		if preview_controller:
 			preview_controller.rotate_preview()
 
+	# Dit plaatst het gebouw met links, mits je niet op de UI klikt
 	if build_mode and event.is_action_pressed("left_click"):
 		if !get_viewport().gui_get_hovered_control():
 			place_building()
 
+	# Dit verwijdert een gebouw met rechts
 	if build_mode and event.is_action_pressed("right_click"):
 		if grid_validator:
 			grid_validator.delete_building()
 
 
 func toggle_build_mode():
+	print("--- TOGGLE BUILD MODE GEACTIVEERD ---")
+	print("Huidige status build_mode VOOR klik: ", build_mode)
+	
+	if building_ui == null:
+		print("❌ FOUT: 'building_ui' is leeg (null) in de Inspector van het bouwscript!")
+		return
 
 	build_mode = !build_mode
 	building_ui.visible = !building_ui.visible
+	
+	print("Nieuwe status build_mode NA klik: ", build_mode)
+	print("Is de UI nu zichtbaar?: ", building_ui.visible)
 
 	if build_mode and current_scene:
-		preview_controller.create_preview(current_scene)
+		if preview_controller:
+			preview_controller.create_preview(current_scene)
 	else:
-		preview_controller.remove_preview()
+		if preview_controller:
+			preview_controller.remove_preview()
 		current_scene = null
+
 
 
 func select_building(scene: PackedScene):
