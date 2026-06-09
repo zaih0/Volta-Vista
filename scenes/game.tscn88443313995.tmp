@@ -1024,16 +1024,16 @@ texture = ExtResource("4_iywne")
 50:21/0/custom_data_1 = 4
 51:21/0 = 0
 51:21/0/custom_data_0 = "Iron"
-51:21/0/custom_data_1 = 3
+51:21/0/custom_data_1 = 4
 52:21/0 = 0
 52:21/0/custom_data_0 = "Iron"
-52:21/0/custom_data_1 = 3
+52:21/0/custom_data_1 = 4
 53:21/0 = 0
 53:21/0/custom_data_0 = "Iron"
-53:21/0/custom_data_1 = 2
+53:21/0/custom_data_1 = 3
 54:21/0 = 0
 54:21/0/custom_data_0 = "Iron"
-54:21/0/custom_data_1 = 2
+54:21/0/custom_data_1 = 3
 1:22/0 = 0
 2:22/0 = 0
 3:22/0 = 0
@@ -1069,16 +1069,16 @@ texture = ExtResource("4_iywne")
 50:22/0/custom_data_1 = 4
 51:22/0 = 0
 51:22/0/custom_data_0 = "Iron"
-51:22/0/custom_data_1 = 3
+51:22/0/custom_data_1 = 4
 52:22/0 = 0
 52:22/0/custom_data_0 = "Iron"
-52:22/0/custom_data_1 = 3
+52:22/0/custom_data_1 = 4
 53:22/0 = 0
 53:22/0/custom_data_0 = "Iron"
-53:22/0/custom_data_1 = 2
+53:22/0/custom_data_1 = 3
 54:22/0 = 0
 54:22/0/custom_data_0 = "Iron"
-54:22/0/custom_data_1 = 2
+54:22/0/custom_data_1 = 3
 55:22/0 = 0
 55:22/0/custom_data_0 = "Iron"
 55:22/0/custom_data_1 = 1
@@ -7289,27 +7289,27 @@ position = Vector2(9, -44)
 [node name="iron_layer2" type="TileMapLayer" parent="map/IronCluster2" unique_id=994469092]
 position = Vector2(1165, 772)
 tile_map_data = PackedByteArray("AADn/9r/AAAxABUAAADn/9v/AAAxABYAAADo/9r/AAAyABUAAADo/9v/AAAyABYAAAA=")
-tile_set = SubResource("TileSet_gee14")
+tile_set = SubResource("TileSet_u5sy4")
 
 [node name="iron_layer" type="TileMapLayer" parent="map/IronCluster2" unique_id=1396564842]
 position = Vector2(1165, 771)
 tile_map_data = PackedByteArray("AAD7/xQAAAA1ABUAAAD7/xUAAAA1ABYAAAD8/xQAAAA2ABUAAAD8/xUAAAA2ABYAAADn/9v/AAAxABUAAADn/9z/AAAxABYAAADo/9v/AAAyABUAAADo/9z/AAAyABYAAAA=")
-tile_set = SubResource("TileSet_gee14")
+tile_set = SubResource("TileSet_u5sy4")
 
 [node name="iron_layer5" type="TileMapLayer" parent="map/IronCluster2" unique_id=2147193645]
 position = Vector2(1165, 772)
 tile_map_data = PackedByteArray("AADl/9v/AAAxABUAAADl/9z/AAAxABYAAADm/9v/AAAyABUAAADm/9z/AAAyABYAAAA=")
-tile_set = SubResource("TileSet_gee14")
+tile_set = SubResource("TileSet_u5sy4")
 
 [node name="iron_layer4" type="TileMapLayer" parent="map/IronCluster2" unique_id=269851210]
 position = Vector2(1165, 772)
 tile_map_data = PackedByteArray("AADm/9r/AAAzABUAAADm/9v/AAAzABYAAADn/9r/AAA0ABUAAADn/9v/AAA0ABYAAAA=")
-tile_set = SubResource("TileSet_gee14")
+tile_set = SubResource("TileSet_u5sy4")
 
 [node name="iron_layer3" type="TileMapLayer" parent="map/IronCluster2" unique_id=1533286858]
 position = Vector2(1165, 772)
 tile_map_data = PackedByteArray("AADm/9v/AAAxABUAAADm/9z/AAAxABYAAADn/9z/AAAyABYAAADn/9v/AAAyABUAAAA=")
-tile_set = SubResource("TileSet_gee14")
+tile_set = SubResource("TileSet_u5sy4")
 
 [node name="IronCluster3" type="TileMapLayer" parent="map" unique_id=1843625929]
 position = Vector2(-43, -110)
@@ -7317,27 +7317,27 @@ position = Vector2(-43, -110)
 [node name="iron_layer2" type="TileMapLayer" parent="map/IronCluster3" unique_id=1500516231]
 position = Vector2(1165, 772)
 tile_map_data = PackedByteArray("AAD8/xMAAAA1ABUAAAD8/xQAAAA1ABYAAAD9/xMAAAA2ABUAAAD9/xQAAAA2ABYAAAD6/xMAAAA1ABUAAAD6/xQAAAA1ABYAAAD7/xMAAAA2ABUAAAD7/xQAAAA2ABYAAADn/9r/AAAxABUAAADn/9v/AAAxABYAAADo/9r/AAAyABUAAADo/9v/AAAyABYAAAA=")
-tile_set = SubResource("TileSet_gee14")
+tile_set = SubResource("TileSet_u5sy4")
 
 [node name="iron_layer" type="TileMapLayer" parent="map/IronCluster3" unique_id=1320530319]
 position = Vector2(1165, 771)
 tile_map_data = PackedByteArray("AAD7/xQAAAA1ABUAAAD7/xUAAAA1ABYAAAD8/xQAAAA2ABUAAAD8/xUAAAA2ABYAAADn/9v/AAAxABUAAADn/9z/AAAxABYAAADo/9v/AAAyABUAAADo/9z/AAAyABYAAAA=")
-tile_set = SubResource("TileSet_gee14")
+tile_set = SubResource("TileSet_u5sy4")
 
 [node name="iron_layer5" type="TileMapLayer" parent="map/IronCluster3" unique_id=1791599519]
 position = Vector2(1165, 772)
 tile_map_data = PackedByteArray("AADl/9v/AAAxABUAAADl/9z/AAAxABYAAADm/9v/AAAyABUAAADm/9z/AAAyABYAAAA=")
-tile_set = SubResource("TileSet_gee14")
+tile_set = SubResource("TileSet_u5sy4")
 
 [node name="iron_layer4" type="TileMapLayer" parent="map/IronCluster3" unique_id=661164570]
 position = Vector2(1165, 772)
 tile_map_data = PackedByteArray("AADm/9r/AAAzABUAAADm/9v/AAAzABYAAADn/9r/AAA0ABUAAADn/9v/AAA0ABYAAAA=")
-tile_set = SubResource("TileSet_gee14")
+tile_set = SubResource("TileSet_u5sy4")
 
 [node name="iron_layer3" type="TileMapLayer" parent="map/IronCluster3" unique_id=350741015]
 position = Vector2(1165, 772)
 tile_map_data = PackedByteArray("AAD8/xMAAAA1ABUAAAD8/xQAAAA1ABYAAAD9/xMAAAA2ABUAAAD9/xQAAAA2ABYAAAD6/xMAAAA1ABUAAAD6/xQAAAA1ABYAAAD7/xMAAAA2ABUAAAD7/xQAAAA2ABYAAADm/9v/AAAxABUAAADm/9z/AAAxABYAAADn/9z/AAAyABYAAADn/9v/AAAyABUAAAA=")
-tile_set = SubResource("TileSet_gee14")
+tile_set = SubResource("TileSet_u5sy4")
 
 [node name="StoneClusters" type="TileMapLayer" parent="map" unique_id=485406025]
 
