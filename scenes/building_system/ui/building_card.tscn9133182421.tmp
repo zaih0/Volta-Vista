@@ -5,77 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://j0h0schlcvyr" path="res://assets/ui/buttons/basic/button.png" id="3_o1g44"]
 
 [node name="building_card" type="MarginContainer" unique_id=1070117985]
-z_index = 10
 custom_minimum_size = Vector2(220, 220)
 offset_right = 150.0
 offset_bottom = 150.0
 script = ExtResource("1_s41ql")
 
-[node name="info_container" type="Control" parent="." unique_id=451550356]
-z_index = 11
-layout_mode = 2
-mouse_filter = 2
-
-[node name="NinePatchRect" type="NinePatchRect" parent="info_container" unique_id=820363632]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 212.0
-offset_right = 212.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_i4sgl")
-patch_margin_left = 7
-patch_margin_top = 7
-patch_margin_right = 7
-patch_margin_bottom = 7
-
-[node name="HBoxContainer" type="HBoxContainer" parent="info_container/NinePatchRect" unique_id=1142242806]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="info_container/NinePatchRect/HBoxContainer" unique_id=1464738447]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="info_container/NinePatchRect/HBoxContainer" unique_id=1408028838]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="info_container/NinePatchRect/HBoxContainer/VBoxContainer" unique_id=1786486360]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.1
-
-[node name="building_info" type="RichTextLabel" parent="info_container/NinePatchRect/HBoxContainer/VBoxContainer" unique_id=1235514020]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="MarginContainer2" type="MarginContainer" parent="info_container/NinePatchRect/HBoxContainer/VBoxContainer" unique_id=2078892404]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.1
-
-[node name="MarginContainer2" type="MarginContainer" parent="info_container/NinePatchRect/HBoxContainer" unique_id=1657819438]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.1
-
-[node name="MarginContainer3" type="MarginContainer" parent="info_container/NinePatchRect/HBoxContainer" unique_id=251236398]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.1
-
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1788941317]
-z_index = 9
 layout_mode = 2
 texture = ExtResource("2_i4sgl")
 patch_margin_left = 7
@@ -86,7 +21,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=305497426]
-z_index = 10
 layout_mode = 2
 mouse_filter = 2
 
@@ -149,6 +83,69 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 mouse_filter = 2
+
+[node name="info_container" type="Control" parent="." unique_id=451550356]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="info_container" unique_id=820363632]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -285.0
+offset_right = 229.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_o1g44")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="info_container/NinePatchRect" unique_id=1142242806]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="info_container/NinePatchRect/HBoxContainer" unique_id=1464738447]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="info_container/NinePatchRect/HBoxContainer" unique_id=1408028838]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="info_container/NinePatchRect/HBoxContainer/VBoxContainer" unique_id=1786486360]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="building_info" type="RichTextLabel" parent="info_container/NinePatchRect/HBoxContainer/VBoxContainer" unique_id=1235514020]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="info_container/NinePatchRect/HBoxContainer/VBoxContainer" unique_id=2078892404]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="MarginContainer2" type="MarginContainer" parent="info_container/NinePatchRect/HBoxContainer" unique_id=1657819438]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="MarginContainer3" type="MarginContainer" parent="info_container/NinePatchRect/HBoxContainer" unique_id=251236398]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

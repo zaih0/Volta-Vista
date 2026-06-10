@@ -24,12 +24,22 @@ var placeables := [
 		"name": "Small House",
 		"scene": "res://scenes/building_system/buildings/small_house.tscn",
 		"preview_scale": 2,
+		"cost": {
+			"stone": 5,
+			"wood": 10,
+			"iron": 0
+		},
 		"catagory": catagories.Housing
 	},
 	{
 		"name": "Medium House",
 		"scene": "res://scenes/building_system/buildings/medium_house.tscn",
 		"preview_scale": 1.5,
+		"cost": {
+			"stone": 10,
+			"wood": 20,
+			"iron": 5
+		},
 		"catagory": catagories.Housing
 	}
 ]
@@ -37,18 +47,7 @@ var placeables := [
 func _ready() -> void:
 	create_catagory_buttons()
 	
-	# VEILIGHEIDSCHECK 1: Is de card_scene wel gekoppeld in de Inspector?
-	if card_scene == null:
-		print("❌ CRITIEKE FOUT: Je bent vergeten de 'card_scene' te koppelen in de Inspector van 'setup_build_ui.gd'!")
-		return
-
 	for placeable in placeables:
-		# VEILIGHEIDSCHECK 2: Controleer of het bestandspad niet leeg of kapot is
-		var path = placeable["scene"]
-		if path == "" or path == "res://" or not ResourceLoader.exists(path):
-			print("❌ FOUT IN BROWSER: Het gebouw '", placeable["name"], "' heeft een ongeldig of missend bestandspad: ", path)
-			continue # Sla dit specifieke gebouw over, maar laat de game NIET crashen!
-			
 		create_card(placeable)
 		
 	if close_button:
@@ -71,9 +70,7 @@ func create_card(placeable):
 	if card_container:
 		card_container.add_child(card)
 		card.setup(
-			placeable["name"],
-			placeable["scene"],
-			placeable["preview_scale"]
+			placeable
 		)
 		card.category = placeable["catagory"]
 		card.building_selected.connect(on_card_selected)

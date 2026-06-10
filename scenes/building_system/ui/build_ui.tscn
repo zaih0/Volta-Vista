@@ -62,6 +62,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
 
 [node name="catagory_container" type="HBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=176493445]
+z_index = 5
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
