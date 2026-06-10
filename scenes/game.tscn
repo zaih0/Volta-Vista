@@ -1,5 +1,7 @@
 [gd_scene format=4 uid="uid://buxmlkmah52oe"]
 
+[ext_resource type="Texture2D" uid="uid://be1iq3l8ilguq" path="res://assets/monkey.jpg" id="1_kvuet"]
+[ext_resource type="Texture2D" uid="uid://ca4s20fxne8nx" path="res://assets/monkey3.jpeg" id="1_trtic"]
 [ext_resource type="Script" uid="uid://c2ruy2qvbe1vn" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://clha7874xb6y1" path="res://scenes/DroppedItem.tscn" id="2_kvpfn"]
 [ext_resource type="Script" uid="uid://i3oceddvgj5n" path="res://scenes/building_system/preview_controller.gd" id="2_lbhrr"]
@@ -9,7 +11,7 @@
 [ext_resource type="Script" uid="uid://dru0vr4l54h5o" path="res://scenes/building_system/grid_validator.gd" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b33ggtqkfvxpm" path="res://scenes/building_system/ui/build_ui.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://b2h2dsfi3thfk" path="res://scenes/resource_ui.tscn" id="8_kvpfn"]
-[ext_resource type="PackedScene" uid="uid://5hgn5xctcaqc" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
+[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bt4ugktj5we01" path="res://scenes/questlist.tscn" id="12_dinhu"]
 [ext_resource type="Script" uid="uid://b0qwyhuopj5d2" path="res://scripts/inventory.gd" id="14_trtic"]
 
@@ -7175,6 +7177,20 @@ custom_data_layer_1/type = 2
 sources/0 = SubResource("TileSetAtlasSource_gee14")
 
 [node name="game" type="Node2D" unique_id=501190735]
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=25998424]
+offset_left = 2962.0
+offset_top = -1526.0
+offset_right = 7001.0
+offset_bottom = 2513.0
+texture = ExtResource("1_trtic")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1993679490]
+offset_left = -2702.0
+offset_top = -4806.0
+offset_right = 2961.9429
+offset_bottom = -1619.0
+texture = ExtResource("1_kvuet")
 
 [node name="map" type="TileMapLayer" parent="." unique_id=427580702 node_paths=PackedStringArray("build_controller", "inventory")]
 position = Vector2(-1257, -615)
