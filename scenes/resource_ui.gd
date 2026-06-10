@@ -1,8 +1,8 @@
-extends CanvasLayer
+extends Control
 
-@onready var iron_counter: Label = $Control/HBoxContainer/VBoxContainer/IronCounter
-@onready var stone_counter: Label = $Control/HBoxContainer/VBoxContainer/StoneCounter
-@onready var wood_counter: Label = $Control/HBoxContainer/VBoxContainer/WoodCounter
+@onready var iron_counter: Label = $HBoxContainer/VBoxContainer/IronCounter
+@onready var stone_counter: Label = $HBoxContainer/VBoxContainer/StoneCounter
+@onready var wood_counter: Label = $HBoxContainer/VBoxContainer/WoodCounter
 
 func _ready():
 	# Stel de posities van de labels netjes onder elkaar in

@@ -1,6 +1,6 @@
 extends Node
 
-@export var ui_node: CanvasLayer
+@export var ui_node: Control
 
 var resources: Dictionary = {
 	"iron": 0,

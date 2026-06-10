@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b2h2dsfi3thfk"]
 
+[ext_resource type="Script" uid="uid://i7onktw0rufa" path="res://scenes/resource_ui.gd" id="1_2nqf5"]
+
 [node name="resourceUI" type="Control" unique_id=345746920]
 layout_mode = 3
 anchors_preset = 15
@@ -9,6 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_2nqf5")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2109266619]
 layout_mode = 1

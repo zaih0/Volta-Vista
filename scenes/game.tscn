@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://b33ggtqkfvxpm" path="res://scenes/building_system/ui/build_ui.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://b2h2dsfi3thfk" path="res://scenes/resource_ui.tscn" id="8_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://5hgn5xctcaqc" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
-[ext_resource type="Script" uid="uid://i7onktw0rufa" path="res://scenes/resource_ui.gd" id="13_kvuet"]
 [ext_resource type="Script" uid="uid://b0qwyhuopj5d2" path="res://scripts/inventory.gd" id="14_trtic"]
 
 [sub_resource type="TileSet" id="TileSet_trtic"]
@@ -7375,7 +7374,6 @@ tilemaps = [NodePath("../map/ground_layer"), NodePath("../map/top_ground_layer")
 script = ExtResource("2_lbhrr")
 
 [node name="ResourceUI" type="CanvasLayer" parent="." unique_id=2099738749]
-script = ExtResource("13_kvuet")
 
 [node name="resourceUI" parent="ResourceUI" unique_id=345746920 instance=ExtResource("8_kvpfn")]
 
@@ -7389,4 +7387,4 @@ script = ExtResource("13_kvuet")
 
 [node name="Inventory" type="Node" parent="." unique_id=809663561 node_paths=PackedStringArray("ui_node")]
 script = ExtResource("14_trtic")
-ui_node = NodePath("../ResourceUI")
+ui_node = NodePath("../ResourceUI/resourceUI")
