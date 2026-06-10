@@ -7376,12 +7376,13 @@ limit_smoothed = true
 editor_draw_limits = true
 script = ExtResource("2_lnu2h")
 
-[node name="building_manager" type="Node2D" parent="." unique_id=1479431133 node_paths=PackedStringArray("buildings_parent", "building_ui", "preview_controller", "grid_validator")]
+[node name="building_manager" type="Node2D" parent="." unique_id=1479431133 node_paths=PackedStringArray("buildings_parent", "building_ui", "preview_controller", "grid_validator", "quest_ui")]
 script = ExtResource("3_lnu2h")
 buildings_parent = NodePath("../buildings")
 building_ui = NodePath("../CanvasLayer/build_ui")
 preview_controller = NodePath("../preview_controller")
 grid_validator = NodePath("../grid_validator")
+quest_ui = NodePath("../CanvasLayer2/MarginContainer")
 
 [node name="grid_validator" type="Node2D" parent="." unique_id=2037995187 node_paths=PackedStringArray("tilemaps")]
 script = ExtResource("4_p57ef")
