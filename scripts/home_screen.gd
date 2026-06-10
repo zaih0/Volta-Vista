@@ -21,4 +21,4 @@ func _on_load_game_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()

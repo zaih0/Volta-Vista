@@ -5,6 +5,7 @@ extends Node2D
 
 @export var preview_controller: Node
 @export var grid_validator: Node2D
+@export var quest_ui: MarginContainer
 
 var current_scene: PackedScene = null
 var build_mode := false
@@ -69,6 +70,7 @@ func toggle_build_mode():
 
 
 func select_building(scene: PackedScene):
+	quest_ui.complete_task("place_building")
 	print("building changed")
 	current_scene = scene
 
@@ -97,3 +99,5 @@ func place_building():
 	buildings_parent.add_child(building)
 
 	grid_validator.register_building(cell, building)
+	
+	quest_ui.complete_task("place_building")

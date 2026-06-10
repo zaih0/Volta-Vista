@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bt4ugktj5we01"]
+
+[ext_resource type="Script" uid="uid://dhwn52drqify" path="res://scenes/quest_list.gd" id="1_00qbj"]
+[ext_resource type="Texture2D" uid="uid://cqawfmywc444n" path="res://assets/ui/frame/UI_frame.png" id="1_tlkf2"]
+
+[node name="MarginContainer" type="MarginContainer" unique_id=1404736729]
+offset_right = 300.0
+offset_bottom = 200.0
+script = ExtResource("1_00qbj")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1512356928]
+layout_mode = 2
+texture = ExtResource("1_tlkf2")
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect" unique_id=70911144]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect/HBoxContainer" unique_id=338979243]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/HBoxContainer" unique_id=355558154]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect/HBoxContainer/VBoxContainer" unique_id=221153860]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="MarginContainer3" type="MarginContainer" parent="NinePatchRect/HBoxContainer/VBoxContainer" unique_id=374870397]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/HBoxContainer/VBoxContainer/MarginContainer3" unique_id=1690490868]
+layout_mode = 2
+
+[node name="Task1" type="RichTextLabel" parent="NinePatchRect/HBoxContainer/VBoxContainer/MarginContainer3/VBoxContainer" unique_id=1825814794]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="Task2" type="RichTextLabel" parent="NinePatchRect/HBoxContainer/VBoxContainer/MarginContainer3/VBoxContainer" unique_id=1370000772]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="Task3" type="RichTextLabel" parent="NinePatchRect/HBoxContainer/VBoxContainer/MarginContainer3/VBoxContainer" unique_id=900538381]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect/HBoxContainer/VBoxContainer" unique_id=1938538319]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect/HBoxContainer" unique_id=1996037962]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
