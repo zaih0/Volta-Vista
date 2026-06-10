@@ -10,6 +10,13 @@ var resources: Dictionary = {
 	"wood": 0
 }
 
+func remove_resource(type: String, quantity: int):
+	if !resources.has(type):
+		return
+	resources[type] -= quantity
+	ui_node.update_resource_display(type, resources[type])
+	pass
+
 func add_resource(resource_type, amount: int):
 	print("--- INVENTORY BINNENGEKOMEN ---")
 	

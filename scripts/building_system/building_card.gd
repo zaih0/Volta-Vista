@@ -11,9 +11,12 @@ signal building_selected(scene: PackedScene)
 var building_scene: PackedScene
 var category: int
 
+var this_building_info: Dictionary
+
 var building_info_visible = false
 
 func setup(building_info: Dictionary):
+	this_building_info = building_info
 	title_label.text = building_info.name
 	building_scene = load(building_info.scene)
 	content_container.add_child(building_scene.instantiate())
@@ -40,7 +43,7 @@ func _gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			print("gui card pressed")
-			building_selected.emit(building_scene)
+			building_selected.emit(this_building_info)
 
 
 func _on_mouse_exited() -> void:

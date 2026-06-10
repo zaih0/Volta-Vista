@@ -6,8 +6,10 @@ extends Node2D
 @export var preview_controller: Node
 @export var grid_validator: Node2D
 @export var quest_ui: MarginContainer
+@export var inventory: Node
 
-var current_scene: PackedScene = null
+var current_scene: PackedScene
+var building_info: Dictionary
 var build_mode := false
 
 
@@ -66,12 +68,28 @@ func toggle_build_mode():
 
 
 
-func select_building(scene: PackedScene):
-	current_scene = scene
-
+func select_building(building_dict: Dictionary):
+	building_info = building_dict
+	current_scene = load(building_info.scene)
+	
 	if build_mode:
 		preview_controller.create_preview(current_scene)
 
+func check_building_requirements() -> bool:
+	var costs = building_info.cost
+	var current_resources = inventory.resources
+	
+	if costs.wood > current_resources.wood: return false
+	if costs.stone > current_resources.stone: return false
+	if costs.iron > current_resources.iron: return false
+	
+	return true
+
+func remove_required_resources():
+	var costs = building_info.cost
+	inventory.remove_resource("wood", costs.wood)
+	inventory.remove_resource("stone", costs.stone)
+	inventory.remove_resource("iron", costs.iron)
 
 func place_building():
 	if current_scene == null:
@@ -90,8 +108,11 @@ func place_building():
 	building.global_position = map.to_global(map.map_to_local(cell))
 	building.rotation = preview_controller.get_rotation()
 
-	buildings_parent.add_child(building)
 	
-	grid_validator.register_building(cell, building)
+	#var required_resources
+	if check_building_requirements():
+		remove_required_resources()
+		buildings_parent.add_child(building)
+		grid_validator.register_building(cell, building)
 	
-	quest_ui.complete_task("place_building")
+		quest_ui.complete_task("place_building")
