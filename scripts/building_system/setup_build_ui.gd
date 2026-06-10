@@ -75,8 +75,8 @@ func create_card(placeable):
 		card.category = placeable["catagory"]
 		card.building_selected.connect(on_card_selected)
 
-func on_card_selected(scene: PackedScene):
-	building_selected.emit(scene)
+func on_card_selected(building_info: Dictionary):
+	building_selected.emit(building_info)
 
 func on_catagory_selected(category):
 	if card_container:
