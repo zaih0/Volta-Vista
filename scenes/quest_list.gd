@@ -3,11 +3,14 @@ extends Control
 @onready var task_1 = $"NinePatchRect/HBoxContainer/VBoxContainer/MarginContainer3/VBoxContainer/Task1"
 @onready var task_2 = $"NinePatchRect/HBoxContainer/VBoxContainer/MarginContainer3/VBoxContainer/Task2"
 @onready var task_3 = $"NinePatchRect/HBoxContainer/VBoxContainer/MarginContainer3/VBoxContainer/Task3"
+@onready var task_4 = $"NinePatchRect/HBoxContainer/VBoxContainer/MarginContainer3/VBoxContainer/Task4"
+
 
 var tasks = {
 	"move_camera": false,
 	"open_build_ui": false,
-	"place_building": false
+	"place_building": false,
+	"gather_resources": false
 }
 
 func _ready():
@@ -39,10 +42,12 @@ func update_quest_list():
 	task_1.bbcode_enabled = true
 	task_2.bbcode_enabled = true
 	task_3.bbcode_enabled = true
+	task_4.bbcode_enabled = true
 
 	task_1.text = get_task_text("Move camera using W, A, S, D", tasks["move_camera"])
 	task_2.text = get_task_text("Open build UI using B", tasks["open_build_ui"])
 	task_3.text = get_task_text("Place building using building UI", tasks["place_building"])
+	task_4.text = get_task_text("Gather resources", tasks["gather_resources"])
 
 func get_task_text(task_label: String, completed: bool) -> String:
 	if completed:

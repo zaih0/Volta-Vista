@@ -61,6 +61,11 @@ layout_mode = 2
 size_flags_vertical = 3
 bbcode_enabled = true
 
+[node name="Task4" type="RichTextLabel" parent="NinePatchRect/HBoxContainer/VBoxContainer/MarginContainer3/VBoxContainer" unique_id=1398630126]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
 [node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect/HBoxContainer/VBoxContainer" unique_id=1938538319]
 layout_mode = 2
 size_flags_vertical = 3
