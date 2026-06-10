@@ -9,7 +9,8 @@
 [ext_resource type="Script" uid="uid://dru0vr4l54h5o" path="res://scenes/building_system/grid_validator.gd" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b33ggtqkfvxpm" path="res://scenes/building_system/ui/build_ui.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://b2h2dsfi3thfk" path="res://scenes/resource_ui.tscn" id="8_kvpfn"]
-[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
+[ext_resource type="PackedScene" uid="uid://5hgn5xctcaqc" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
+[ext_resource type="PackedScene" uid="uid://bt4ugktj5we01" path="res://scenes/questlist.tscn" id="12_dinhu"]
 [ext_resource type="Script" uid="uid://b0qwyhuopj5d2" path="res://scripts/inventory.gd" id="14_trtic"]
 
 [sub_resource type="TileSet" id="TileSet_trtic"]
@@ -7382,7 +7383,7 @@ buildings_parent = NodePath("../buildings")
 building_ui = NodePath("../CanvasLayer/build_ui")
 preview_controller = NodePath("../preview_controller")
 grid_validator = NodePath("../grid_validator")
-quest_ui = NodePath("../CanvasLayer2/MarginContainer")
+quest_ui = NodePath("../QuestList/MarginContainer")
 
 [node name="grid_validator" type="Node2D" parent="." unique_id=2037995187 node_paths=PackedStringArray("tilemaps")]
 script = ExtResource("4_p57ef")
@@ -7406,3 +7407,7 @@ script = ExtResource("2_lbhrr")
 [node name="Inventory" type="Node" parent="." unique_id=809663561 node_paths=PackedStringArray("ui_node")]
 script = ExtResource("14_trtic")
 ui_node = NodePath("../ResourceUI/resourceUI")
+
+[node name="QuestList" type="CanvasLayer" parent="." unique_id=2018682550]
+
+[node name="MarginContainer" parent="QuestList" unique_id=1404736729 instance=ExtResource("12_dinhu")]
