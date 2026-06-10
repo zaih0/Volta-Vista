@@ -36,7 +36,7 @@ func _input(event):
 
 	# Dit plaatst het gebouw met links, mits je niet op de UI klikt
 	if build_mode and event.is_action_pressed("left_click"):
-		if !get_viewport().gui_get_hovered_control():
+		if !is_mouse_over_building_ui():
 			place_building()
 
 	# Dit verwijdert een gebouw met rechts
@@ -44,20 +44,17 @@ func _input(event):
 		if grid_validator:
 			grid_validator.delete_building()
 
+func is_mouse_over_building_ui() -> bool:
+	var hovered = get_viewport().gui_get_hovered_control()
+	return hovered != null and building_ui.is_ancestor_of(hovered)
 
 func toggle_build_mode():
-	print("--- TOGGLE BUILD MODE GEACTIVEERD ---")
-	print("Huidige status build_mode VOOR klik: ", build_mode)
 	
 	if building_ui == null:
-		print("❌ FOUT: 'building_ui' is leeg (null) in de Inspector van het bouwscript!")
 		return
 
 	build_mode = !build_mode
 	building_ui.visible = !building_ui.visible
-	
-	print("Nieuwe status build_mode NA klik: ", build_mode)
-	print("Is de UI nu zichtbaar?: ", building_ui.visible)
 
 	if build_mode and current_scene:
 		if preview_controller:
@@ -70,8 +67,6 @@ func toggle_build_mode():
 
 
 func select_building(scene: PackedScene):
-	quest_ui.complete_task("place_building")
-	print("building changed")
 	current_scene = scene
 
 	if build_mode:
@@ -79,7 +74,6 @@ func select_building(scene: PackedScene):
 
 
 func place_building():
-
 	if current_scene == null:
 		return
 
@@ -97,7 +91,7 @@ func place_building():
 	building.rotation = preview_controller.get_rotation()
 
 	buildings_parent.add_child(building)
-
+	
 	grid_validator.register_building(cell, building)
 	
 	quest_ui.complete_task("place_building")
