@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://buxmlkmah52oe"]
 
 [ext_resource type="Script" uid="uid://c2ruy2qvbe1vn" path="res://scripts/game.gd" id="1_u5sy4"]
-[ext_resource type="Script" uid="uid://i3oceddvgj5n" path="res://scenes/preview_controller.gd" id="2_lbhrr"]
+[ext_resource type="Script" uid="uid://i3oceddvgj5n" path="res://scenes/building_system/preview_controller.gd" id="2_lbhrr"]
 [ext_resource type="Script" uid="uid://csi7c5wx78uc1" path="res://scenes/camera_2d.gd" id="2_lnu2h"]
 [ext_resource type="Script" uid="uid://cyuv4keu3b3ap" path="res://scripts/building_system/building_manager.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="4_iywne"]
-[ext_resource type="Script" uid="uid://dru0vr4l54h5o" path="res://scenes/grid_validator.gd" id="4_p57ef"]
+[ext_resource type="Script" uid="uid://dru0vr4l54h5o" path="res://scenes/building_system/grid_validator.gd" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b33ggtqkfvxpm" path="res://scenes/building_system/ui/build_ui.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://2xufa623xf0c" path="res://scenes/pause_menu.gd" id="7_u5sy4"]
 [ext_resource type="FontFile" uid="uid://cxymlhu45rumf" path="res://assets/fonts/basis33.ttf" id="9_dinhu"]
@@ -7421,23 +7421,7 @@ offset_bottom = 23.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1483493729]
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1563105960]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="build_ui" parent="CanvasLayer" unique_id=769331028 instance=ExtResource("5_iywne")]
-anchors_preset = 15
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-grow_vertical = 2
 
 [node name="pause" type="CanvasLayer" parent="." unique_id=1399682814]
 
