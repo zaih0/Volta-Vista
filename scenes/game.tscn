@@ -24,6 +24,9 @@ custom_data_layer_1/type = 2
 [ext_resource type="Texture2D" uid="uid://b2pt8isaywd6f" path="res://assets/ui/buttons/basic/button_click.png" id="11_trtic"]
 [ext_resource type="Texture2D" uid="uid://c4p3tlqr0qdwy" path="res://assets/ui/buttons/basic/button_hover.png" id="12_ir15t"]
 [ext_resource type="PackedScene" uid="uid://bt4ugktj5we01" path="res://scenes/questlist.tscn" id="13_kvuet"]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
@@ -7518,4 +7521,7 @@ size_flags_stretch_ratio = 0.33
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1104089541]
 
 [node name="MarginContainer" parent="CanvasLayer2" unique_id=1404736729 instance=ExtResource("13_kvuet")]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
