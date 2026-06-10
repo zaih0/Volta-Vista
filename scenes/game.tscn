@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://buxmlkmah52oe"]
 
 [ext_resource type="Script" uid="uid://c2ruy2qvbe1vn" path="res://scripts/game.gd" id="1_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://clha7874xb6y1" path="res://scenes/DroppedItem.tscn" id="2_kvpfn"]
 [ext_resource type="Script" uid="uid://i3oceddvgj5n" path="res://scenes/building_system/preview_controller.gd" id="2_lbhrr"]
 [ext_resource type="Script" uid="uid://csi7c5wx78uc1" path="res://scenes/camera_2d.gd" id="2_lnu2h"]
 [ext_resource type="Script" uid="uid://cyuv4keu3b3ap" path="res://scripts/building_system/building_manager.gd" id="3_lnu2h"]
@@ -8,7 +9,7 @@
 [ext_resource type="Script" uid="uid://dru0vr4l54h5o" path="res://scenes/building_system/grid_validator.gd" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b33ggtqkfvxpm" path="res://scenes/building_system/ui/build_ui.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://b2h2dsfi3thfk" path="res://scenes/resource_ui.tscn" id="8_kvpfn"]
-[ext_resource type="PackedScene" uid="uid://5hgn5xctcaqc" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
+[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
 [ext_resource type="Script" uid="uid://b0qwyhuopj5d2" path="res://scripts/inventory.gd" id="14_trtic"]
 
 [sub_resource type="TileSet" id="TileSet_trtic"]
@@ -16,6 +17,18 @@ custom_data_layer_0/name = "resource_type"
 custom_data_layer_0/type = 4
 custom_data_layer_1/name = "amount"
 custom_data_layer_1/type = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvpfn"]
+atlas = ExtResource("4_iywne")
+region = Rect2(784, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dinhu"]
+atlas = ExtResource("4_iywne")
+region = Rect2(880, 480, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvuet"]
+atlas = ExtResource("4_iywne")
+region = Rect2(880, 352, 16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
 texture = ExtResource("4_iywne")
@@ -7166,6 +7179,10 @@ sources/0 = SubResource("TileSetAtlasSource_gee14")
 position = Vector2(-1257, -615)
 tile_set = SubResource("TileSet_trtic")
 script = ExtResource("1_u5sy4")
+dropped_item_scene = ExtResource("2_kvpfn")
+wood_texture = SubResource("AtlasTexture_kvpfn")
+stone_texture = SubResource("AtlasTexture_dinhu")
+iron_texture = SubResource("AtlasTexture_kvuet")
 build_controller = NodePath("../building_manager")
 inventory = NodePath("../Inventory")
 

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://clha7874xb6y1"]
+
+[ext_resource type="Script" uid="uid://ioj3oujfw1ud" path="res://DroppedItem.gd" id="1_24p7l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip0rf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ip0rf"]
+
+[node name="DroppedItem" type="Area2D" unique_id=1712844262]
+script = ExtResource("1_24p7l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1648435500]
+texture = SubResource("AtlasTexture_ip0rf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=129701617]
+shape = SubResource("CircleShape2D_ip0rf")

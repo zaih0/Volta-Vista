@@ -18,7 +18,7 @@ func _ready():
 	building_ui.close_build_menu.connect(toggle_build_mode)
 
 
-func _process(delta):
+func _process(_delta):
 	if build_mode and preview_controller:
 		preview_controller.update_preview_position()
 

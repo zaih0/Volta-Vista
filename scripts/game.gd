@@ -1,5 +1,9 @@
 extends TileMapLayer
 
+@export var dropped_item_scene: PackedScene 
+@export var wood_texture: Texture2D
+@export var stone_texture: Texture2D
+@export var iron_texture: Texture2D
 @export var build_controller: Node2D
 @export var inventory: Node
 
@@ -93,11 +97,12 @@ func harvest_under_mouse() -> float:
 		if tile_data != null:
 			var resource_type: String = ""
 			
-			var tile_set = layer.tile_set
-			if tile_set:
+			# VERANDERD: tile_set is hernoemd naar current_tileset
+			var current_tileset = layer.tile_set
+			if current_tileset:
 				var layer_exists = false
-				for i in range(tile_set.get_custom_data_layers_count()):
-					if tile_set.get_custom_data_layer_name(i) == "resource_type":
+				for i in range(current_tileset.get_custom_data_layers_count()):
+					if current_tileset.get_custom_data_layer_name(i) == "resource_type":
 						layer_exists = true
 						break
 				
@@ -134,14 +139,15 @@ func harvest_under_mouse() -> float:
 			
 	return 0.0
 
-func harvest_tile(layer: TileMapLayer, _cell: Vector2i, tile_data: TileData, resource_type: String):
+func harvest_tile(layer: TileMapLayer, cell: Vector2i, tile_data: TileData, resource_type: String):
 	var amount = 1
-	var tile_set = layer.tile_set
+	# VERANDERD: tile_set is hernoemd naar current_tileset
+	var current_tileset = layer.tile_set
 	
-	if tile_set:
+	if current_tileset:
 		var amount_layer_exists = false
-		for i in range(tile_set.get_custom_data_layers_count()):
-			if tile_set.get_custom_data_layer_name(i) == "resource_amount":
+		for i in range(current_tileset.get_custom_data_layers_count()):
+			if current_tileset.get_custom_data_layer_name(i) == "resource_amount":
 				amount_layer_exists = true
 				break
 				
@@ -152,5 +158,40 @@ func harvest_tile(layer: TileMapLayer, _cell: Vector2i, tile_data: TileData, res
 
 	print("Succesvol geoogst: ", amount, " ", resource_type)
 
-	if inventory != null and inventory.has_method("add_resource"):
-		inventory.add_resource(resource_type, amount)
+	# Items fysiek spawnen op de map
+	spawn_dropped_item(layer, cell, resource_type, amount)
+
+
+
+func spawn_dropped_item(layer: TileMapLayer, cell: Vector2i, type: String, amt: int):
+	if dropped_item_scene == null:
+		push_error("Vergeet niet om dropped_item_scene toe te wijzen in de Inspector!")
+		return
+		
+	# 1. Kies de juiste AtlasTexture op basis van het type resource
+	var chosen_texture: Texture2D = null
+	if type == "wood":
+		chosen_texture = wood_texture
+	elif type == "stone":
+		chosen_texture = stone_texture
+	elif type == "iron":
+		chosen_texture = iron_texture
+		
+	# 2. Bereken de exacte positie van het midden van de tegel
+	var map_position = layer.map_to_local(cell)
+	var global_tile_position = layer.to_global(map_position)
+	
+	# 3. Instantieer de item scene
+	var item_instance = dropped_item_scene.instantiate()
+	
+	# 4. Geef de variabelen EN de gekozen texture mee
+	item_instance.position = global_tile_position
+	item_instance.resource_type = type
+	item_instance.amount = amt
+	item_instance.z_index = 5 # Netjes boven de grond-tegels getekend
+	
+	if "texture_to_use" in item_instance:
+		item_instance.texture_to_use = chosen_texture
+	
+	# 5. Voeg toe aan de wereld
+	get_parent().add_child(item_instance)
