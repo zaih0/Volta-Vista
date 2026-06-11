@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://h0ddw1d3br02"
+path="res://.godot/imported/Peasant All Quotes - WarCraft 3.mp3-05c1438d344b75815ba02aeb0d192f3a.mp3str"
+
+[deps]
+
+source_file="res://AudioBestanden Circumsized/Unedited audio/Peasant All Quotes - WarCraft 3.mp3"
+dest_files=["res://.godot/imported/Peasant All Quotes - WarCraft 3.mp3-05c1438d344b75815ba02aeb0d192f3a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
