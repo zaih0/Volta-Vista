@@ -1,10 +1,10 @@
-[gd_scene format=4 uid="uid://dkfuxtpel0bk4"]
+[gd_scene format=4 uid="uid://deass86aii7by"]
 
-[ext_resource type="Script" uid="uid://bu1vo3b6dnfih" path="res://scripts/building_system/calculate_footprint.gd" id="1_kfa6a"]
-[ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="2_cyxj1"]
+[ext_resource type="Script" uid="uid://bu1vo3b6dnfih" path="res://scripts/building_system/calculate_footprint.gd" id="1_hbs5j"]
+[ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="2_wituf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbhq3"]
-texture = ExtResource("2_cyxj1")
+texture = ExtResource("2_wituf")
 12:0/0 = 0
 13:0/0 = 0
 14:0/0 = 0
@@ -1750,7 +1750,7 @@ texture = ExtResource("2_cyxj1")
 sources/0 = SubResource("TileSetAtlasSource_xbhq3")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sr1lu"]
-texture = ExtResource("2_cyxj1")
+texture = ExtResource("2_wituf")
 12:0/0 = 0
 13:0/0 = 0
 14:0/0 = 0
@@ -3495,19 +3495,25 @@ texture = ExtResource("2_cyxj1")
 [sub_resource type="TileSet" id="TileSet_xbhq3"]
 sources/0 = SubResource("TileSetAtlasSource_sr1lu")
 
-[node name="House" type="Node2D" unique_id=29287472]
-script = ExtResource("1_kfa6a")
-
-[node name="building" type="TileMapLayer" parent="." unique_id=1945648141]
-position = Vector2(1160, 792)
-tile_map_data = PackedByteArray("AAC2/87/AAAQABwAAAC2/8//AAAhAB0AAAC3/87/AAAQABwAAAC3/8//AAAkABwAAAC4/87/AAAQABwAAAC4/8//AAAhAB0AAAC5/83/AAARABsAAAC5/87/AAARABwAAAC5/8//AAARAB0AAAC1/83/AAAPABsAAAC1/87/AAAPABwAAAC1/8//AAAPAB0AAAC1/8z/AAAPABkAAAC5/8z/AAARABkAAAC2/8z/AAAQABkAAAC3/8z/AAAQABkAAAC4/8z/AAAQABkAAAC2/83/AAAWAB0AAGC3/83/AAAWAB0AAGC4/83/AAAWAB0AAGA=")
-tile_set = SubResource("TileSet_goaca")
+[node name="lumberjack" type="Node2D" unique_id=29287472]
+script = ExtResource("1_hbs5j")
 
 [node name="detail_layer1" type="TileMapLayer" parent="." unique_id=225815610]
-position = Vector2(1160, 792)
-tile_map_data = PackedByteArray("AAC3/8//AAAeAB8AAAC2/8//AAAeAB8AAAC4/8//AAAeAB8AAAA=")
+position = Vector2(1143, 808)
+tile_map_data = PackedByteArray("AAC7/83/AAAnABAAAAC7/87/AAAnAAoAAAA=")
+tile_set = SubResource("TileSet_goaca")
+
+[node name="detail_layer3" type="TileMapLayer" parent="." unique_id=716132412]
+position = Vector2(1148, 808)
+tile_map_data = PackedByteArray("AAC2/8//AAAwAAgAAAA=")
+tile_set = SubResource("TileSet_goaca")
+
+[node name="building" type="TileMapLayer" parent="." unique_id=1945648141]
+position = Vector2(1143, 808)
+tile_map_data = PackedByteArray("AAC3/83/AAAVAAsAAAC3/87/AAAVAAsAAAC3/8//AAAUAA0AAAC7/83/AAAcAAsAAAC7/87/AAAcAAwAAAC7/8//AAAcAA0AAAC6/87/AAAbAAwAAAC4/87/AAAVAAwAAAC5/83/AAAeAAoAAAC5/87/AAAeAA0AAAC5/8z/AAAeAAsAAAC4/83/AAAVAAsAAAC6/83/AAAbAAsAAAC5/8r/AAAeAAkAAAC5/8v/AAAeAAsAAAC7/8v/AAAcAA8AAAC4/8v/AAAVAA8AAAC6/8v/AAAbAA8AAAC3/8z/AAAVAAsAAAC7/8z/AAAcAAsAAAC6/8z/AAAbAAsAAAC4/8z/AAAVAAsAAAC6/8//AAAXAAwAAAC5/8//AAAnABwAAAC4/8//AAAVAA0AAAC1/8z/AAAUAAsAAAC1/83/AAAUAAsAAAC1/87/AAAUAAwAAAC1/8//AAAPAA4AAAC2/8z/AAAVAAsAAAC2/83/AAAVAAsAAAC2/87/AAAVAAsAAAC6/8r/AAAfAAkAAAC4/8r/AAAdAAkAAAA=")
 tile_set = SubResource("TileSet_goaca")
 
 [node name="detail_layer2" type="TileMapLayer" parent="." unique_id=1600428960]
-position = Vector2(2320, 1568)
+position = Vector2(1143, 1584)
+tile_map_data = PackedByteArray("AAC3/57/AAAZAA8AAAC2/57/AAAZAA8AAAC3/5v/AAAZAA8AAAC2/5v/AAAZAA8AAAC1/5v/AAAbAA4AAAA=")
 tile_set = SubResource("TileSet_xbhq3")

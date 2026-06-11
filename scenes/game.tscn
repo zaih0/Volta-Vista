@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://dru0vr4l54h5o" path="res://scenes/building_system/grid_validator.gd" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b33ggtqkfvxpm" path="res://scenes/building_system/ui/build_ui.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://b2h2dsfi3thfk" path="res://scenes/resource_ui.tscn" id="8_kvpfn"]
-[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
+[ext_resource type="PackedScene" uid="uid://5hgn5xctcaqc" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bt4ugktj5we01" path="res://scenes/questlist.tscn" id="12_dinhu"]
 [ext_resource type="Script" uid="uid://b0qwyhuopj5d2" path="res://scripts/inventory.gd" id="14_trtic"]
 
