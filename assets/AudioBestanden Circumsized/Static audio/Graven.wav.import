@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://8t6a8e1xd6vy"
+path="res://.godot/imported/Graven.wav-9239ca1719f51c9ba285ff3ad6b242af.sample"
+
+[deps]
+
+source_file="res://assets/AudioBestanden Circumsized/Static audio/Graven.wav"
+dest_files=["res://.godot/imported/Graven.wav-9239ca1719f51c9ba285ff3ad6b242af.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

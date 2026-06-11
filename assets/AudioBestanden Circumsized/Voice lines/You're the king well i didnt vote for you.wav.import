@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dhkpco4n6rpsd"
+path="res://.godot/imported/You're the king well i didnt vote for you.wav-0a2a37a05ad2def486b17b371ec0521e.sample"
+
+[deps]
+
+source_file="res://assets/AudioBestanden Circumsized/Voice lines/You're the king well i didnt vote for you.wav"
+dest_files=["res://.godot/imported/You're the king well i didnt vote for you.wav-0a2a37a05ad2def486b17b371ec0521e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

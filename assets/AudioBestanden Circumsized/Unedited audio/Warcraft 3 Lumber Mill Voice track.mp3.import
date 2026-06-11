@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnntpxpsb1kqo"
+path="res://.godot/imported/Warcraft 3 Lumber Mill Voice track.mp3-d801313d66a9cd0d41278066451de7c8.mp3str"
+
+[deps]
+
+source_file="res://assets/AudioBestanden Circumsized/Unedited audio/Warcraft 3 Lumber Mill Voice track.mp3"
+dest_files=["res://.godot/imported/Warcraft 3 Lumber Mill Voice track.mp3-d801313d66a9cd0d41278066451de7c8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
