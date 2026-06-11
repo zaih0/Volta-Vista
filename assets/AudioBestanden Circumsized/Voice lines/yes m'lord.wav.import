@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ck8gyyu56uxs2"
-path="res://.godot/imported/yes m'lord.wav-5c6685e10175d821a61b3beb622ff4fa.sample"
+path="res://.godot/imported/yes m'lord.wav-b3548fa7b176750ed2c905aff827e103.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Voice lines/yes m'lord.wav"
-dest_files=["res://.godot/imported/yes m'lord.wav-5c6685e10175d821a61b3beb622ff4fa.sample"]
+source_file="res://assets/AudioBestanden Circumsized/Voice lines/yes m'lord.wav"
+dest_files=["res://.godot/imported/yes m'lord.wav-b3548fa7b176750ed2c905aff827e103.sample"]
 
 [params]
 

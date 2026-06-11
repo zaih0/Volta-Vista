@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://8t6a8e1xd6vy"
-path="res://.godot/imported/Graven.wav-07274a4698d810fed737eaec0777b385.sample"
+path="res://.godot/imported/Graven.wav-9239ca1719f51c9ba285ff3ad6b242af.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Static audio/Graven.wav"
-dest_files=["res://.godot/imported/Graven.wav-07274a4698d810fed737eaec0777b385.sample"]
+source_file="res://assets/AudioBestanden Circumsized/Static audio/Graven.wav"
+dest_files=["res://.godot/imported/Graven.wav-9239ca1719f51c9ba285ff3ad6b242af.sample"]
 
 [params]
 

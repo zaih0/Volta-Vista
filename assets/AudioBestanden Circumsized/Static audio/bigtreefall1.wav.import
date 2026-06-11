@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cs3grnebd0x6a"
-path="res://.godot/imported/bigtreefall1.wav-8cdf61c845237caedeb0ed30b3fe1658.sample"
+path="res://.godot/imported/bigtreefall1.wav-829a373f2c3e8b7b57e00bb61575157f.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Static audio/bigtreefall1.wav"
-dest_files=["res://.godot/imported/bigtreefall1.wav-8cdf61c845237caedeb0ed30b3fe1658.sample"]
+source_file="res://assets/AudioBestanden Circumsized/Static audio/bigtreefall1.wav"
+dest_files=["res://.godot/imported/bigtreefall1.wav-829a373f2c3e8b7b57e00bb61575157f.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dsewrekxarxvj"
-path="res://.godot/imported/Peon All Quotes - WarCraft 3.mp3-a72258f1d4807a12403867fc1c55cb01.mp3str"
+path="res://.godot/imported/Peon All Quotes - WarCraft 3.mp3-1b4799be7c9fcba6a3db66f8e2b0ffc9.mp3str"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Unedited audio/Peon All Quotes - WarCraft 3.mp3"
-dest_files=["res://.godot/imported/Peon All Quotes - WarCraft 3.mp3-a72258f1d4807a12403867fc1c55cb01.mp3str"]
+source_file="res://assets/AudioBestanden Circumsized/Unedited audio/Peon All Quotes - WarCraft 3.mp3"
+dest_files=["res://.godot/imported/Peon All Quotes - WarCraft 3.mp3-1b4799be7c9fcba6a3db66f8e2b0ffc9.mp3str"]
 
 [params]
 

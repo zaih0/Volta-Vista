@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dhkpco4n6rpsd"
-path="res://.godot/imported/You're the king well i didnt vote for you.wav-e16b05c4c9634d93406ea28ee73bfb57.sample"
+path="res://.godot/imported/You're the king well i didnt vote for you.wav-0a2a37a05ad2def486b17b371ec0521e.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Voice lines/You're the king well i didnt vote for you.wav"
-dest_files=["res://.godot/imported/You're the king well i didnt vote for you.wav-e16b05c4c9634d93406ea28ee73bfb57.sample"]
+source_file="res://assets/AudioBestanden Circumsized/Voice lines/You're the king well i didnt vote for you.wav"
+dest_files=["res://.godot/imported/You're the king well i didnt vote for you.wav-0a2a37a05ad2def486b17b371ec0521e.sample"]
 
 [params]
 

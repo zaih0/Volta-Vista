@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ge8g355yrmss"
-path="res://.godot/imported/sloopgeluid 2.wav-bf9c53ea0382df0d56442c2f160c7a80.sample"
+path="res://.godot/imported/sloopgeluid 2.wav-217d8550c00e92131464b4962741a2ca.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Static audio/sloopgeluid 2.wav"
-dest_files=["res://.godot/imported/sloopgeluid 2.wav-bf9c53ea0382df0d56442c2f160c7a80.sample"]
+source_file="res://assets/AudioBestanden Circumsized/Static audio/sloopgeluid 2.wav"
+dest_files=["res://.godot/imported/sloopgeluid 2.wav-217d8550c00e92131464b4962741a2ca.sample"]
 
 [params]
 

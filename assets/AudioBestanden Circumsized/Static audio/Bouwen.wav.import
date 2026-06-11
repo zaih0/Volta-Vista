@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bonbkjxo8ofjg"
-path="res://.godot/imported/Bouwen.wav-030bf414c75713ffc074ca79fa0bd026.sample"
+path="res://.godot/imported/Bouwen.wav-890e1c0510ff5094377e46fad8b4acb9.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Static audio/Bouwen.wav"
-dest_files=["res://.godot/imported/Bouwen.wav-030bf414c75713ffc074ca79fa0bd026.sample"]
+source_file="res://assets/AudioBestanden Circumsized/Static audio/Bouwen.wav"
+dest_files=["res://.godot/imported/Bouwen.wav-890e1c0510ff5094377e46fad8b4acb9.sample"]
 
 [params]
 

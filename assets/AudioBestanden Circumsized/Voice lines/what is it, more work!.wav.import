@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b0tov2suadnh"
-path="res://.godot/imported/what is it, more work!.wav-855ef015c8605374d39588c1c6b2bea8.sample"
+path="res://.godot/imported/what is it, more work!.wav-ee170e9f385b40eb3026169b43dbc537.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Voice lines/what is it, more work!.wav"
-dest_files=["res://.godot/imported/what is it, more work!.wav-855ef015c8605374d39588c1c6b2bea8.sample"]
+source_file="res://assets/AudioBestanden Circumsized/Voice lines/what is it, more work!.wav"
+dest_files=["res://.godot/imported/what is it, more work!.wav-ee170e9f385b40eb3026169b43dbc537.sample"]
 
 [params]
 

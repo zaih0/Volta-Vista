@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dviijc5ig5dlq"
-path="res://.godot/imported/Ready to work ork.wav-b938148fd1b39f1e9d7ca387b1a30305.sample"
+path="res://.godot/imported/Ready to work ork.wav-fcd23eb11851b62f7d5a6f5fd3a8bd66.sample"
 
 [deps]
 
-source_file="res://AudioBestanden Circumsized/Voice lines/Ready to work ork.wav"
-dest_files=["res://.godot/imported/Ready to work ork.wav-b938148fd1b39f1e9d7ca387b1a30305.sample"]
+source_file="res://assets/AudioBestanden Circumsized/Voice lines/Ready to work ork.wav"
+dest_files=["res://.godot/imported/Ready to work ork.wav-fcd23eb11851b62f7d5a6f5fd3a8bd66.sample"]
 
 [params]
 
