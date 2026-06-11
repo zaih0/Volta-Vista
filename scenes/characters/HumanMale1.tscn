@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bwqhc17xnv87p"]
+
+[ext_resource type="Texture2D" uid="uid://5pcuxwndnlkl" path="res://assets/character_sprites/walk_down1.png" id="1_0072m"]
+[ext_resource type="Script" uid="uid://covylnhpaic85" path="res://scripts/TestAudio.gd" id="1_fx8st"]
+[ext_resource type="AudioStream" uid="uid://dgnbu4xgidh1l" path="res://assets/AudioBestanden Circumsized/Cant_build_there.wav" id="2_0072m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0072m"]
+size = Vector2(34, 38)
+
+[node name="HumanMale1" type="Node2D" unique_id=634689338]
+script = ExtResource("1_fx8st")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1727775172]
+texture = ExtResource("1_0072m")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=911483768]
+stream = ExtResource("2_0072m")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1488069431]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=829878726]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_0072m")

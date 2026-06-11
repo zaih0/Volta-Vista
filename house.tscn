@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://cfxcv51oikx4g"]
 
-[ext_resource type="Script" path="res://scenes/buildings/house.gd" id="1_metfq"]
 [ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="2_6syyc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbhq3"]
@@ -1750,7 +1749,6 @@ texture = ExtResource("2_6syyc")
 sources/0 = SubResource("TileSetAtlasSource_xbhq3")
 
 [node name="House" type="Node2D" unique_id=29287472]
-script = ExtResource("1_metfq")
 
 [node name="building" type="TileMapLayer" parent="." unique_id=1945648141]
 position = Vector2(1160, 776)
