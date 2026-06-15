@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://buxmlkmah52oe"]
 
+[ext_resource type="Shader" uid="uid://cyc1ppmtbfe2q" path="res://scenes/game.gdshader" id="1_ir15t"]
 [ext_resource type="Texture2D" uid="uid://be1iq3l8ilguq" path="res://assets/monkey.jpg" id="1_kvuet"]
 [ext_resource type="Texture2D" uid="uid://ca4s20fxne8nx" path="res://assets/monkey3.jpeg" id="1_trtic"]
 [ext_resource type="Script" uid="uid://c2ruy2qvbe1vn" path="res://scripts/game.gd" id="1_u5sy4"]
@@ -15,6 +16,16 @@
 [ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
 [ext_resource type="PackedScene" path="res://scenes/questlist.tscn" id="12_dinhu"]
 [ext_resource type="Script" uid="uid://b0qwyhuopj5d2" path="res://scripts/inventory.gd" id="14_trtic"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ca42v"]
+shader = ExtResource("1_ir15t")
+shader_parameter/resolution = Vector2(2560, 1920)
+shader_parameter/scan_line_amount = 0.5
+shader_parameter/warp_amount = 0.5350000254125
+shader_parameter/vignette_amount = 1.0
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/grille_amount = 0.05
+shader_parameter/brightness_boost = 1.2
 
 [sub_resource type="TileSet" id="TileSet_trtic"]
 custom_data_layer_0/name = "resource_type"
@@ -7178,6 +7189,13 @@ custom_data_layer_1/type = 2
 sources/0 = SubResource("TileSetAtlasSource_gee14")
 
 [node name="game" type="Node2D" unique_id=501190735]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=133704350]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=563511443]
+material = SubResource("ShaderMaterial_ca42v")
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=25998424]
 offset_left = 2962.0
