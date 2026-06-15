@@ -7,8 +7,8 @@ var footprint_origin: Vector2i
 
 var shift := Vector2i(-2, -2)
 
-func setup(info_menu_toggle: bool):
-	$building_info.setup(info_menu_toggle)
+func setup(info_menu_toggle: bool, building_info: Dictionary):
+	$building_info.setup(info_menu_toggle, building_info)
 
 func _ready():
 
