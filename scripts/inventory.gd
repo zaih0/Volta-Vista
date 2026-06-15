@@ -5,9 +5,9 @@ signal resource_added(resource_type, amount)
 @export var ui_node: Control
 
 var resources: Dictionary = {
-	"iron": 0,
-	"stone": 0,
-	"wood": 0
+	"iron": 999,
+	"stone": 999,
+	"wood": 999
 }
 
 func remove_resource(type: String, quantity: int):

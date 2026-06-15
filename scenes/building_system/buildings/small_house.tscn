@@ -1,7 +1,9 @@
 [gd_scene format=4 uid="uid://ckegh62goxrab"]
 
 [ext_resource type="Script" uid="uid://bu1vo3b6dnfih" path="res://scripts/building_system/calculate_footprint.gd" id="1_xefvm"]
-[ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="2_f55oc"]
+[ext_resource type="Texture2D" uid="uid://br57w5a6hdj01" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="2_f55oc"]
+[ext_resource type="Script" uid="uid://jl04gsogurfu" path="res://scenes/building_system/buildings/building_info.gd" id="2_iikiy"]
+[ext_resource type="PackedScene" uid="uid://b4av5xwjd3r0b" path="res://scenes/building_system/ui/building_info_card.tscn" id="3_twaqs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbhq3"]
 texture = ExtResource("2_f55oc")
@@ -3497,6 +3499,18 @@ sources/0 = SubResource("TileSetAtlasSource_sr1lu")
 
 [node name="House" type="Node2D" unique_id=29287472]
 script = ExtResource("1_xefvm")
+
+[node name="building_info" type="Node2D" parent="." unique_id=574067495]
+script = ExtResource("2_iikiy")
+
+[node name="building_info" type="CanvasLayer" parent="building_info" unique_id=254311129]
+visible = false
+
+[node name="BuildingInfoCard" parent="building_info/building_info" unique_id=149325758 instance=ExtResource("3_twaqs")]
+offset_left = -425.0
+offset_top = -212.5
+offset_right = 425.0
+offset_bottom = 212.5
 
 [node name="building" type="TileMapLayer" parent="." unique_id=1945648141]
 position = Vector2(1160, 792)

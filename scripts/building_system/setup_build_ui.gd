@@ -41,6 +41,39 @@ var placeables := [
 			"iron": 5
 		},
 		"catagory": catagories.Housing
+	},
+	{
+		"name": "Lumberjack",
+		"scene": "res://scenes/building_system/buildings/lumberjack.tscn",
+		"preview_scale": 1.5,
+		"cost": {
+			"stone": 10,
+			"wood": 20,
+			"iron": 5
+		},
+		"catagory": catagories.Housing
+	},
+	{
+		"name": "Miner",
+		"scene": "res://scenes/building_system/buildings/miner.tscn",
+		"preview_scale": 1.5,
+		"cost": {
+			"stone": 10,
+			"wood": 20,
+			"iron": 5
+		},
+		"catagory": catagories.Housing
+	},
+	{
+		"name": "Research Lab",
+		"scene": "res://scenes/building_system/buildings/research_lab.tscn",
+		"preview_scale": 1.5,
+		"cost": {
+			"stone": 10,
+			"wood": 20,
+			"iron": 5
+		},
+		"catagory": catagories.Housing
 	}
 ]
 

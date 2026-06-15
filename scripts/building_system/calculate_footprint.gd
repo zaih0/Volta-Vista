@@ -7,6 +7,9 @@ var footprint_origin: Vector2i
 
 var shift := Vector2i(-2, -2)
 
+func setup(info_menu_toggle: bool):
+	$building_info.setup(info_menu_toggle)
+
 func _ready():
 
 	var cells = building.get_used_cells()

@@ -1,7 +1,9 @@
 [gd_scene format=4 uid="uid://63wy5wic7gaj"]
 
 [ext_resource type="Script" uid="uid://bu1vo3b6dnfih" path="res://scripts/building_system/calculate_footprint.gd" id="1_osecd"]
-[ext_resource type="Texture2D" uid="uid://c57ibs0wu81cm" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="2_b5q46"]
+[ext_resource type="Texture2D" uid="uid://br57w5a6hdj01" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="2_b5q46"]
+[ext_resource type="Script" uid="uid://jl04gsogurfu" path="res://scenes/building_system/buildings/building_info.gd" id="2_hu4x4"]
+[ext_resource type="PackedScene" uid="uid://b4av5xwjd3r0b" path="res://scenes/building_system/ui/building_info_card.tscn" id="3_lk0xx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sr1lu"]
 texture = ExtResource("2_b5q46")
@@ -1749,8 +1751,24 @@ texture = ExtResource("2_b5q46")
 [sub_resource type="TileSet" id="TileSet_xbhq3"]
 sources/0 = SubResource("TileSetAtlasSource_sr1lu")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sx4pn"]
+size = Vector2(103, 91)
+
 [node name="House2" type="Node2D" unique_id=29287472]
 script = ExtResource("1_osecd")
+
+[node name="building_info" type="Node2D" parent="." unique_id=780290108]
+position = Vector2(1088, 781)
+script = ExtResource("2_hu4x4")
+
+[node name="building_info" type="CanvasLayer" parent="building_info" unique_id=1064902354]
+visible = false
+
+[node name="BuildingInfoCard" parent="building_info/building_info" unique_id=149325758 instance=ExtResource("3_lk0xx")]
+offset_left = -425.0
+offset_top = -212.5
+offset_right = 425.0
+offset_bottom = 212.5
 
 [node name="detail_layer2" type="TileMapLayer" parent="." unique_id=225815610]
 position = Vector2(1088, 781)
@@ -1761,3 +1779,12 @@ tile_set = SubResource("TileSet_xbhq3")
 position = Vector2(1088, 781)
 tile_map_data = PackedByteArray("AAC+/8z/AAAcAB8AAAC+/83/AAAcABsAAAC+/87/AAAcABsAAAC+/8//AAAcABsAAAC+/9D/AAAcABwAAAC+/9H/AAARAB4AAAC9/9D/AAAbABwAAAC8/9D/AAAYABwAAAC7/9D/AAAYABwAAAC6/8//AAAVABsAAAC6/9D/AAAVABwAAAC9/8//AAAbABsAAAC9/87/AAAbABsAAAC9/83/AAAbABsAAAC6/83/AAAVABsAAAC6/87/AAAVABsAAAC5/8//AAAUABsAAAC5/9D/AAAUABwAAAC5/9H/AAAUAB0AAAC5/87/AAAUABsAAAC5/83/AAAUABsAAAC9/8z/AAAbAB8AAAC6/8z/AAAVAB8AAAC5/8z/AAAUAB8AAAC6/9H/AAAXABwAAAC7/9H/AAAXABwAAAC8/9H/AAAXABwAAAC9/9H/AAAXABwAAAC7/8z/AAAYAB8AAAC8/8z/AAAYAB8AAAA=")
 tile_set = SubResource("TileSet_xbhq3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2046160225]
+position = Vector2(1087, 781)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2125160540]
+position = Vector2(3.5, -3.5)
+shape = SubResource("RectangleShape2D_sx4pn")
+
+[connection signal="input_event" from="Area2D" to="building_info" method="_on_area_2d_input_event"]
