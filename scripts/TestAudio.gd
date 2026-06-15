@@ -3,14 +3,45 @@ extends Node2D
 @onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var collision_shape: CollisionShape2D = $Area2D/CollisionShape2D
 
+@export var voice_lines: Array[AudioStream] = []
+@export var voice_play_chance: float = 1.0
+@export var click_cooldown: float = 0.2
+
+var cooldown_timer: float = 0.0
+
+
+func _process(delta: float) -> void:
+	if cooldown_timer > 0.0:
+		cooldown_timer -= delta
 
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if cooldown_timer > 0.0:
+				return
+
 			if mouse_is_inside_character():
-				audio_player.stop()
-				audio_player.play()
+				play_random_voice_line()
+				cooldown_timer = click_cooldown
+
+
+func play_random_voice_line() -> void:
+	if voice_lines.is_empty():
+		print("Geen voicelines ingesteld.")
+		return
+
+	if randf() > voice_play_chance:
+		print("Geen voiceline deze klik.")
+		return
+
+	var chosen_voice: AudioStream = voice_lines.pick_random()
+
+	audio_player.stop()
+	audio_player.stream = chosen_voice
+	audio_player.play()
+
+	print("Voiceline afgespeeld: ", chosen_voice)
 
 
 func mouse_is_inside_character() -> bool:

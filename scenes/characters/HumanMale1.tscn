@@ -2,13 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://5pcuxwndnlkl" path="res://assets/character_sprites/walk_down1.png" id="1_0072m"]
 [ext_resource type="Script" uid="uid://covylnhpaic85" path="res://scripts/TestAudio.gd" id="1_fx8st"]
+[ext_resource type="AudioStream" uid="uid://bw8e4sw4pu8d4" path="res://assets/AudioBestanden Circumsized/Jobs done.wav" id="2_7kxww"]
 [ext_resource type="AudioStream" uid="uid://dgnbu4xgidh1l" path="res://assets/AudioBestanden Circumsized/Cant_build_there.wav" id="2_0072m"]
+[ext_resource type="AudioStream" uid="uid://d00okhblsoyid" path="res://assets/AudioBestanden Circumsized/yes.wav" id="3_wc75h"]
+[ext_resource type="AudioStream" uid="uid://dnmcv0dyhgnik" path="res://assets/AudioBestanden Circumsized/Work work.wav" id="4_hpjpr"]
+[ext_resource type="AudioStream" uid="uid://tdmbcc026jf7" path="res://assets/AudioBestanden Circumsized/yes m'lord.wav" id="5_3vcgv"]
+[ext_resource type="AudioStream" uid="uid://cjofyv0tgwocv" path="res://assets/AudioBestanden Circumsized/Off i go then.wav" id="6_n0816"]
+[ext_resource type="AudioStream" uid="uid://b7jtcvrktekvo" path="res://assets/AudioBestanden Circumsized/You're the king well i didnt vote for you.wav" id="7_04yn3"]
+[ext_resource type="AudioStream" uid="uid://crwde00tdffog" path="res://assets/AudioBestanden Circumsized/Ready to work ork.wav" id="8_2it84"]
+[ext_resource type="AudioStream" uid="uid://djk2rv0gleej7" path="res://assets/AudioBestanden Circumsized/what is it, more work!.wav" id="9_veajr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0072m"]
 size = Vector2(34, 38)
 
 [node name="HumanMale1" type="Node2D" unique_id=634689338]
 script = ExtResource("1_fx8st")
+voice_lines = Array[AudioStream]([ExtResource("2_7kxww"), ExtResource("3_wc75h"), ExtResource("4_hpjpr"), ExtResource("5_3vcgv"), ExtResource("6_n0816"), ExtResource("7_04yn3"), ExtResource("8_2it84"), ExtResource("9_veajr")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1727775172]
 texture = ExtResource("1_0072m")

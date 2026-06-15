@@ -7404,6 +7404,9 @@ tile_set = SubResource("TileSet_0tnpc")
 [node name="HumanMale1" parent="map" unique_id=634689338 instance=ExtResource("6_ir15t")]
 position = Vector2(1884, 492)
 
+[node name="HumanMale1" parent="." unique_id=1674306869 instance=ExtResource("6_ir15t")]
+position = Vector2(-36, 0)
+
 [node name="buildings" type="Node2D" parent="." unique_id=22502610]
 
 [node name="camera" type="Camera2D" parent="." unique_id=221457622]

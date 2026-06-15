@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://djk2rv0gleej7"
+path="res://.godot/imported/what is it, more work!.wav-8c86ba4b2e937c7c7133d83f7f32226e.sample"
+
+[deps]
+
+source_file="res://assets/AudioBestanden Circumsized/what is it, more work!.wav"
+dest_files=["res://.godot/imported/what is it, more work!.wav-8c86ba4b2e937c7c7133d83f7f32226e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
