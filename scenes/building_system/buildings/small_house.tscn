@@ -3535,3 +3535,5 @@ position = Vector2(-1, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=975968930]
 position = Vector2(1, -2.75)
 shape = SubResource("RectangleShape2D_iikiy")
+
+[connection signal="input_event" from="Area2D" to="building_info" method="_on_area_2d_input_event"]
