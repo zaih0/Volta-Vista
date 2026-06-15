@@ -22,6 +22,7 @@ enum catagories {
 var placeables := [
 	{
 		"name": "Small House",
+		"description": "Basic housing.",
 		"scene": "res://scenes/building_system/buildings/small_house.tscn",
 		"preview_scale": 2,
 		"cost": {
@@ -33,6 +34,7 @@ var placeables := [
 	},
 	{
 		"name": "Medium House",
+		"description": "Larger housing.",
 		"scene": "res://scenes/building_system/buildings/medium_house.tscn",
 		"preview_scale": 1.5,
 		"cost": {
@@ -44,6 +46,7 @@ var placeables := [
 	},
 	{
 		"name": "Lumberjack",
+		"description": "Produces wood.",
 		"scene": "res://scenes/building_system/buildings/lumberjack.tscn",
 		"preview_scale": 1.5,
 		"cost": {
@@ -55,6 +58,7 @@ var placeables := [
 	},
 	{
 		"name": "Miner",
+		"description": "Produces ore.",
 		"scene": "res://scenes/building_system/buildings/miner.tscn",
 		"preview_scale": 1.5,
 		"cost": {
@@ -66,6 +70,7 @@ var placeables := [
 	},
 	{
 		"name": "Research Lab",
+		"description": "Researches upgrades.",
 		"scene": "res://scenes/building_system/buildings/research_lab.tscn",
 		"preview_scale": 1.5,
 		"cost": {

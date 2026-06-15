@@ -115,6 +115,6 @@ func place_building():
 		buildings_parent.add_child(building)
 		grid_validator.register_building(cell, building)
 		
-		building.setup(true)
+		building.setup(true, building_info)
 	
 		quest_ui.complete_task("place_building")
