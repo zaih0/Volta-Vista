@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://buxmlkmah52oe"]
 
-[ext_resource type="Shader" uid="uid://cyc1ppmtbfe2q" path="res://scenes/game.gdshader" id="1_ir15t"]
+[ext_resource type="Shader" path="res://scenes/game.gdshader" id="1_ir15t"]
 [ext_resource type="Texture2D" uid="uid://be1iq3l8ilguq" path="res://assets/monkey.jpg" id="1_kvuet"]
 [ext_resource type="Texture2D" uid="uid://ca4s20fxne8nx" path="res://assets/monkey3.jpeg" id="1_trtic"]
 [ext_resource type="Script" uid="uid://c2ruy2qvbe1vn" path="res://scripts/game.gd" id="1_u5sy4"]

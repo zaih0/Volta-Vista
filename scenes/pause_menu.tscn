@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://5hgn5xctcaqc"]
+[gd_scene format=3 uid="uid://8ujgjt15hqc"]
 
 [ext_resource type="Script" uid="uid://2xufa623xf0c" path="res://scenes/pause_menu.gd" id="1_7l7mv"]
 [ext_resource type="FontFile" uid="uid://cxymlhu45rumf" path="res://assets/fonts/basis33.ttf" id="2_v4r4p"]
@@ -111,6 +111,25 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_rysoc")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ssvqc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_264po")
 text = "Resume "
+
+[node name="Save game" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1346319786]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_ca42v")
+theme_override_colors/font_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_focus_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.63529414, 0.47843137, 0.25490198, 1)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_v4r4p")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_rysoc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ssvqc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_264po")
+text = "Save game
+"
 
 [node name="RestartButton" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=246014632]
 layout_mode = 2

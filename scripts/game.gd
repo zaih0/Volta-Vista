@@ -24,6 +24,9 @@ var is_harvesting: bool = false
 @export var iron_speed: float = 1.4   
 
 func _ready():
+	add_to_group("save_provider")
+	print("Game toegevoegd aan save_provider: ", get_path())
+	
 	for cluster in iron_clusters:
 		if cluster == null:
 			continue
@@ -189,3 +192,18 @@ func spawn_dropped_item(layer: TileMapLayer, cell: Vector2i, type: String, amt: 
 		item_instance.texture_to_use = chosen_texture
 	
 	get_parent().add_child(item_instance)
+	
+func get_save_data() -> Dictionary:
+	return {
+		"version": 1,
+		"city_name": GameData.city_name
+	}
+
+
+func save_current_game() -> void:
+	print("save_current_game called from game.gd")
+
+	var save_data := get_save_data()
+	print("Save data: ", save_data)
+
+	SaveManager.save_game(save_data)
