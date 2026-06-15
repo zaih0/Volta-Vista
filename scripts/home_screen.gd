@@ -1,15 +1,15 @@
 extends Control
 
+@onready var load_game_button: Button = $"buttons/Load Game"
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_tree().paused = false
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	# Load Game knop alleen aanzetten als er een save bestaat
+	if SaveManager.has_save_file():
+		load_game_button.disabled = false
+	else:
+		load_game_button.disabled = true
 
 
 func _on_start_game_pressed() -> void:
@@ -17,7 +17,20 @@ func _on_start_game_pressed() -> void:
 
 
 func _on_load_game_pressed() -> void:
-	pass # Replace with function body.
+	var save_data := SaveManager.load_game()
+
+	if save_data.is_empty():
+		print("Geen geldige savegame gevonden.")
+		return
+
+	GameData.is_loading_save = true
+	GameData.loaded_save_data = save_data
+	GameData.city_name = str(save_data.get("city_name", ""))
+
+	print("Savegame wordt geladen...")
+	print("Stadsnaam uit save: ", GameData.city_name)
+
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 
 func _on_exit_pressed() -> void:

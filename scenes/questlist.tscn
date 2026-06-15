@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bt4ugktj5we01"]
+[gd_scene format=3 uid="uid://fk7rgci5b338"]
 
-[ext_resource type="Script" uid="uid://dhwn52drqify" path="res://scenes/quest_list.gd" id="1_00qbj"]
+[ext_resource type="Script" path="res://scenes/quest_list.gd" id="1_00qbj"]
 [ext_resource type="Texture2D" uid="uid://cqawfmywc444n" path="res://assets/ui/frame/UI_frame.png" id="1_tlkf2"]
 
 [node name="MarginContainer" type="MarginContainer" unique_id=1404736729]

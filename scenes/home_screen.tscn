@@ -74,7 +74,7 @@ offset_right = 775.0
 offset_bottom = 745.0
 theme_override_constants/v_separation = 15
 
-[node name="button1" type="Button" parent="buttons" unique_id=1049100157]
+[node name="Start Game" type="Button" parent="buttons" unique_id=1049100157]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -91,7 +91,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
 text = "Start Game"
 
-[node name="button2" type="Button" parent="buttons" unique_id=944051874]
+[node name="Load Game" type="Button" parent="buttons" unique_id=944051874]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -107,7 +107,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
 text = "Load Game"
 
-[node name="button3" type="Button" parent="buttons" unique_id=1819979208]
+[node name="Exit" type="Button" parent="buttons" unique_id=1819979208]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -123,6 +123,6 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_bie51")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tjifo")
 text = "Exit"
 
-[connection signal="pressed" from="buttons/button1" to="." method="_on_start_game_pressed"]
-[connection signal="pressed" from="buttons/button2" to="." method="_on_load_game_pressed"]
-[connection signal="pressed" from="buttons/button3" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="buttons/Start Game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="buttons/Load Game" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="buttons/Exit" to="." method="_on_exit_pressed"]
