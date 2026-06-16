@@ -24,7 +24,7 @@ var placeables := [
 		"name": "Small House",
 		"has_ui": true,
 		"description": "Basic housing.",
-		"scene": "res://scenes/building_system/buildings/small_house.tscn",
+		"scene": "res://scenes/building_system/buildings/structures/small_house.tscn",
 		"preview_scale": 2,
 		"cost": {
 			"stone": 5,
@@ -37,7 +37,7 @@ var placeables := [
 		"name": "Medium House",
 		"has_ui": true,
 		"description": "Larger housing.",
-		"scene": "res://scenes/building_system/buildings/medium_house.tscn",
+		"scene": "res://scenes/building_system/buildings/structures/medium_house.tscn",
 		"preview_scale": 1.5,
 		"cost": {
 			"stone": 10,
@@ -50,7 +50,7 @@ var placeables := [
 		"name": "Lumberjack",
 		"has_ui": true,
 		"description": "Produces wood.",
-		"scene": "res://scenes/building_system/buildings/lumberjack.tscn",
+		"scene": "res://scenes/building_system/buildings/structures/lumberjack.tscn",
 		"preview_scale": 1.5,
 		"cost": {
 			"stone": 10,
@@ -63,7 +63,7 @@ var placeables := [
 		"name": "Miner",
 		"has_ui": true,
 		"description": "Produces ore.",
-		"scene": "res://scenes/building_system/buildings/miner.tscn",
+		"scene": "res://scenes/building_system/buildings/structures/miner.tscn",
 		"preview_scale": 1.5,
 		"cost": {
 			"stone": 10,
@@ -76,7 +76,7 @@ var placeables := [
 		"name": "Research Lab",
 		"has_ui": true,
 		"description": "Researches upgrades.",
-		"scene": "res://scenes/building_system/buildings/research_lab.tscn",
+		"scene": "res://scenes/building_system/buildings/structures/research_lab.tscn",
 		"preview_scale": 1.5,
 		"cost": {
 			"stone": 10,
