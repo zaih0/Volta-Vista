@@ -5,7 +5,6 @@ var stop_first_click = true
 
 var building_data: Dictionary
 
-@onready var building_info_container = $building_info
 @onready var building_info_card = $building_info/BuildingInfoCard
 
 # Called when the node enters the scene tree for the first time.
@@ -23,7 +22,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 			if stop_first_click:
 				stop_first_click = false
 				return
-			building_info_container.visible = true
+			building_info_card.visible = true
 
 func setup(info_menu_toggle: bool, building_info: Dictionary):
 	info_menu_enabled = info_menu_toggle
