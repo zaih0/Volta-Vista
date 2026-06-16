@@ -201,7 +201,7 @@ func get_save_data() -> Dictionary:
 
 
 func save_current_game() -> void:
-	print("save_current_game called from game.gd")
+	print("save_current_game calle from game.gd")
 
 	var save_data := get_save_data()
 	print("Save data: ", save_data)
