@@ -1,6 +1,5 @@
 extends Area2D
 
-@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 @export var building_sounds: Array[AudioStream] = []
@@ -8,17 +7,11 @@ extends Area2D
 @export var click_cooldown: float = 0.2
 
 var cooldown_timer: float = 0.0
-var click_audio_enabled: bool = true
 
 
 func _ready() -> void:
-	click_audio_enabled = true
-
-
-func enable_click_audio() -> void:
-	await get_tree().create_timer(0.15).timeout
-	click_audio_enabled = true
-	print("Building click audio enabled")
+	input_pickable = true
+	print("House audio script ready: ", name)
 
 
 func _process(delta: float) -> void:
@@ -26,18 +19,16 @@ func _process(delta: float) -> void:
 		cooldown_timer -= delta
 
 
-func _input(event: InputEvent) -> void:
-	if not click_audio_enabled:
-		return
-
+func _input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			print("Building clicked")
+
 			if cooldown_timer > 0.0:
 				return
 
-			if mouse_is_inside_building():
-				play_random_building_sound()
-				cooldown_timer = click_cooldown
+			play_random_building_sound()
+			cooldown_timer = click_cooldown
 
 
 func play_random_building_sound() -> void:
@@ -55,20 +46,3 @@ func play_random_building_sound() -> void:
 	audio_player.play()
 
 	print("Building sound afgespeeld: ", chosen_sound)
-
-
-func mouse_is_inside_building() -> bool:
-	if collision_shape.shape == null:
-		return false
-
-	if collision_shape.shape is RectangleShape2D:
-		var rect_shape := collision_shape.shape as RectangleShape2D
-		var mouse_pos := get_global_mouse_position()
-
-		var rect_size := rect_shape.size * collision_shape.global_scale
-		var rect_position := collision_shape.global_position - rect_size * 0.5
-		var rect := Rect2(rect_position, rect_size)
-
-		return rect.has_point(mouse_pos)
-
-	return false
