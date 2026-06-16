@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://be1iq3l8ilguq" path="res://assets/monkey.jpg" id="1_kvuet"]
 [ext_resource type="Texture2D" uid="uid://ca4s20fxne8nx" path="res://assets/monkey3.jpeg" id="1_trtic"]
 [ext_resource type="Script" uid="uid://c2ruy2qvbe1vn" path="res://scripts/game.gd" id="1_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://clha7874xb6y1" path="res://scenes/DroppedItem.tscn" id="2_kvpfn"]
+[ext_resource type="PackedScene" path="res://scenes/DroppedItem.tscn" id="2_kvpfn"]
 [ext_resource type="Script" path="res://scenes/building_system/preview_controller.gd" id="2_lbhrr"]
 [ext_resource type="Script" uid="uid://csi7c5wx78uc1" path="res://scenes/camera_2d.gd" id="2_lnu2h"]
 [ext_resource type="Script" uid="uid://cyuv4keu3b3ap" path="res://scripts/building_system/building_manager.gd" id="3_lnu2h"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://8ujgjt15hqc" path="res://scenes/pause_menu.tscn" id="9_vtaks"]
 [ext_resource type="PackedScene" uid="uid://fk7rgci5b338" path="res://scenes/questlist.tscn" id="12_dinhu"]
 [ext_resource type="Script" uid="uid://b0qwyhuopj5d2" path="res://scripts/inventory.gd" id="14_trtic"]
+[ext_resource type="AudioStream" uid="uid://cf58xdtgyrh0m" path="res://assets/AudioBestanden Circumsized/Skyrim - Music & Ambience [nRe3xFeyhVY].wav" id="17_ssvqc"]
+[ext_resource type="Script" uid="uid://btgt40ow3b46a" path="res://scenes/Background_script.gd" id="18_264po"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ca42v"]
 shader = ExtResource("1_ir15t")
@@ -7460,3 +7462,8 @@ ui_node = NodePath("../ResourceUI/resourceUI")
 
 [node name="MarginContainer" parent="QuestList" unique_id=1404736729 instance=ExtResource("12_dinhu")]
 metadata/_edit_use_anchors_ = true
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=285793189]
+stream = ExtResource("17_ssvqc")
+volume_db = -12.0
+script = ExtResource("18_264po")
