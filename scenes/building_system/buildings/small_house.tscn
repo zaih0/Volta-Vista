@@ -3497,6 +3497,9 @@ texture = ExtResource("2_f55oc")
 [sub_resource type="TileSet" id="TileSet_xbhq3"]
 sources/0 = SubResource("TileSetAtlasSource_sr1lu")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iikiy"]
+size = Vector2(64, 53.5)
+
 [node name="House" type="Node2D" unique_id=29287472]
 script = ExtResource("1_xefvm")
 
@@ -3504,9 +3507,9 @@ script = ExtResource("1_xefvm")
 script = ExtResource("2_iikiy")
 
 [node name="building_info" type="CanvasLayer" parent="building_info" unique_id=254311129]
-visible = false
 
 [node name="BuildingInfoCard" parent="building_info/building_info" unique_id=149325758 instance=ExtResource("3_twaqs")]
+visible = false
 offset_left = -425.0
 offset_top = -212.5
 offset_right = 425.0
@@ -3525,3 +3528,12 @@ tile_set = SubResource("TileSet_goaca")
 [node name="detail_layer2" type="TileMapLayer" parent="." unique_id=1600428960]
 position = Vector2(2320, 1568)
 tile_set = SubResource("TileSet_xbhq3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1945284095]
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=975968930]
+position = Vector2(1, -2.75)
+shape = SubResource("RectangleShape2D_iikiy")
+
+[connection signal="input_event" from="Area2D" to="building_info" method="_on_area_2d_input_event"]

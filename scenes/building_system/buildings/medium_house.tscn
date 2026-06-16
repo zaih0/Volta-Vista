@@ -1754,7 +1754,7 @@ texture = ExtResource("2_b5q46")
 sources/0 = SubResource("TileSetAtlasSource_sr1lu")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sx4pn"]
-size = Vector2(103, 91)
+size = Vector2(80, 96.5)
 
 [node name="House2" type="Node2D" unique_id=29287472]
 script = ExtResource("1_osecd")
@@ -1764,9 +1764,9 @@ position = Vector2(1088, 781)
 script = ExtResource("2_hu4x4")
 
 [node name="building_info" type="CanvasLayer" parent="building_info" unique_id=1064902354]
-visible = false
 
 [node name="BuildingInfoCard" parent="building_info/building_info" unique_id=149325758 instance=ExtResource("3_lk0xx")]
+visible = false
 offset_left = -425.0
 offset_top = -212.5
 offset_right = 425.0
@@ -1788,7 +1788,7 @@ script = ExtResource("5_lk0xx")
 building_sounds = Array[AudioStream]([ExtResource("6_sx4pn")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2125160540]
-position = Vector2(3.5, -3.5)
+position = Vector2(-1087, -783.75)
 shape = SubResource("RectangleShape2D_sx4pn")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D" unique_id=1332991061]

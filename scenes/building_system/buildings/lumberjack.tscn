@@ -3509,9 +3509,9 @@ script = ExtResource("1_hbs5j")
 script = ExtResource("2_h32qv")
 
 [node name="building_info" type="CanvasLayer" parent="building_info" unique_id=1509118687]
-visible = false
 
 [node name="BuildingInfoCard" parent="building_info/building_info" unique_id=149325758 instance=ExtResource("2_857on")]
+visible = false
 offset_left = -425.0
 offset_top = -212.5
 offset_right = 425.0

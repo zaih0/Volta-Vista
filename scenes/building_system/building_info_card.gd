@@ -6,3 +6,8 @@ extends Control
 func setup(title:String, text:String):
 	card_title_container.text = title
 	card_text_container.text = text
+
+
+
+func _on_close_button_pressed() -> void:
+	visible = false
