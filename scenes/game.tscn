@@ -7439,7 +7439,6 @@ script = ExtResource("2_lbhrr")
 [node name="ResourceUI" type="CanvasLayer" parent="." unique_id=2099738749]
 
 [node name="resourceUI" parent="ResourceUI" unique_id=345746920 instance=ExtResource("8_kvpfn")]
-mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1483493729]

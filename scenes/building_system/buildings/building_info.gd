@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !info_menu_enabled: return
+	if building_data.has_ui == false: return
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if stop_first_click:
@@ -27,6 +28,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 func setup(info_menu_toggle: bool, building_info: Dictionary):
 	info_menu_enabled = info_menu_toggle
 	building_data = building_info
+	if building_data.has_ui == false: return
 	create_building_info()
 	print("updated ", info_menu_enabled)
 	pass

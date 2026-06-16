@@ -22,6 +22,7 @@ enum catagories {
 var placeables := [
 	{
 		"name": "Small House",
+		"has_ui": true,
 		"description": "Basic housing.",
 		"scene": "res://scenes/building_system/buildings/small_house.tscn",
 		"preview_scale": 2,
@@ -34,6 +35,7 @@ var placeables := [
 	},
 	{
 		"name": "Medium House",
+		"has_ui": true,
 		"description": "Larger housing.",
 		"scene": "res://scenes/building_system/buildings/medium_house.tscn",
 		"preview_scale": 1.5,
@@ -46,6 +48,7 @@ var placeables := [
 	},
 	{
 		"name": "Lumberjack",
+		"has_ui": true,
 		"description": "Produces wood.",
 		"scene": "res://scenes/building_system/buildings/lumberjack.tscn",
 		"preview_scale": 1.5,
@@ -58,6 +61,7 @@ var placeables := [
 	},
 	{
 		"name": "Miner",
+		"has_ui": true,
 		"description": "Produces ore.",
 		"scene": "res://scenes/building_system/buildings/miner.tscn",
 		"preview_scale": 1.5,
@@ -70,6 +74,7 @@ var placeables := [
 	},
 	{
 		"name": "Research Lab",
+		"has_ui": true,
 		"description": "Researches upgrades.",
 		"scene": "res://scenes/building_system/buildings/research_lab.tscn",
 		"preview_scale": 1.5,
@@ -79,6 +84,32 @@ var placeables := [
 			"iron": 5
 		},
 		"catagory": catagories.Housing
+	},
+	{
+		"name": "Small Tree",
+		"has_ui": false,
+		"description": "Just a tree.",
+		"scene": "res://scenes/building_system/buildings/nature/tree_1.tscn",
+		"preview_scale": 1.5,
+		"cost": {
+			"stone": 0,
+			"wood": 2,
+			"iron": 0
+		},
+		"catagory": catagories.Nature
+	},
+	{
+		"name": "Medium Tree",
+		"has_ui": false,
+		"description": "Just a tree.",
+		"scene": "res://scenes/building_system/buildings/nature/tree_2.tscn",
+		"preview_scale": 1.5,
+		"cost": {
+			"stone": 0,
+			"wood": 2,
+			"iron": 0
+		},
+		"catagory": catagories.Nature
 	}
 ]
 

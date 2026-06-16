@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var placement_offset := Vector2i.ZERO
+
 @onready var building: TileMapLayer = $building
 
 var footprint: Array[Vector2i]
@@ -27,4 +29,4 @@ func _ready():
 	footprint_origin = min_pos
 
 	for cell in cells:
-		footprint.append((cell - min_pos) + shift)
+		footprint.append((cell - min_pos) + shift + placement_offset)
