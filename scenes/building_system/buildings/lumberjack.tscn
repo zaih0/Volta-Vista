@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://b4av5xwjd3r0b" path="res://scenes/building_system/ui/building_info_card.tscn" id="2_857on"]
 [ext_resource type="Script" uid="uid://jl04gsogurfu" path="res://scenes/building_system/buildings/building_info.gd" id="2_h32qv"]
 [ext_resource type="Texture2D" uid="uid://br57w5a6hdj01" path="res://assets/tilesets/spr_tileset_sunnysideworld_16px.png" id="2_wituf"]
+[ext_resource type="Script" uid="uid://bidwrf3vedii" path="res://scripts/sawmillaudio.gd" id="5_0p4yp"]
+[ext_resource type="AudioStream" uid="uid://dc30j6shnonqo" path="res://assets/AudioBestanden Circumsized/Lumber Mill audio.wav" id="6_7xy2d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbhq3"]
 texture = ExtResource("2_wituf")
@@ -3537,9 +3539,14 @@ tile_set = SubResource("TileSet_xbhq3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=657238702]
 position = Vector2(-1, 0)
+script = ExtResource("5_0p4yp")
+building_sounds = Array[AudioStream]([ExtResource("6_7xy2d")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=650714526]
 position = Vector2(3.5, -3.5)
 shape = SubResource("RectangleShape2D_hbs5j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D" unique_id=1504960437]
+stream = ExtResource("6_7xy2d")
 
 [connection signal="input_event" from="Area2D" to="building_info" method="_on_area_2d_input_event"]
