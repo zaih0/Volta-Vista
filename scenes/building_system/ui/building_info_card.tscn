@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4av5xwjd3r0b"]
 
-[ext_resource type="Script" uid="uid://b6im5rht7r7j3" path="res://scenes/building_system/building_info_card.gd" id="1_iky41"]
+[ext_resource type="Script" uid="uid://b6im5rht7r7j3" path="res://scripts/building_system/building_info_card.gd" id="1_iky41"]
 [ext_resource type="Texture2D" uid="uid://cqawfmywc444n" path="res://assets/ui/frame/UI_frame.png" id="1_rlawl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlawl"]
